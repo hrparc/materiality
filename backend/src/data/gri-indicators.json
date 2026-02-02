@@ -1,0 +1,517 @@
+{
+  "GRI 11": {
+    "name": "석유 및 가스",
+    "englishName": "Oil and Gas",
+    "fileName": "GRI 11_ Oil and Gas Sector 2021.pdf",
+    "indicators": []
+  },
+  "GRI 12": {
+    "name": "석탄",
+    "englishName": "Coal",
+    "fileName": "GRI 12_ Coal Sector 2022.pdf",
+    "indicators": [
+      {
+        "code": "GRI 201",
+        "name": "Economic Performance",
+        "nameKr": "경제 성과",
+        "category": "G",
+        "type": "필수",
+        "description": "조직의 직접적인 경제적 가치 창출, 분배 및 정부에 대한 지불금 관련 정보를 다룹니다."
+      },
+      {
+        "code": "GRI 202",
+        "name": "Market Presence",
+        "nameKr": "시장 지위",
+        "category": "G",
+        "type": "필수",
+        "description": "최저임금 대비 초임 임금 비율 및 현지 인력 채용 정책 등을 다룹니다."
+      },
+      {
+        "code": "GRI 203",
+        "name": "Indirect Economic Impacts",
+        "nameKr": "간접 경제 영향",
+        "category": "G",
+        "type": "필수",
+        "description": "인프라 투자 및 서비스 지원을 포함한 지역 사회에 미치는 간접적인 경제 영향을 다룹니다."
+      },
+      {
+        "code": "GRI 205",
+        "name": "Anti-corruption",
+        "nameKr": "부패 방지",
+        "category": "G",
+        "type": "필수",
+        "description": "부패 위험 평가, 관련 정책 커뮤니케이션 및 부패 사건에 대한 정보를 다룹니다."
+      },
+      {
+        "code": "GRI 303",
+        "name": "Water and Effluents",
+        "nameKr": "용수 및 폐수",
+        "category": "E",
+        "type": "필수",
+        "description": "수자원 관련 상호작용, 용수 취수, 소비, 방류 및 수질 관련 영향 관리를 다룹니다."
+      },
+      {
+        "code": "GRI 304",
+        "name": "Biodiversity",
+        "nameKr": "생물다양성",
+        "category": "E",
+        "type": "필수",
+        "description": "보호 지역 또는 생물다양성 가치가 높은 지역 안팎의 사업장이 생물다양성에 미치는 영향을 다룹니다."
+      },
+      {
+        "code": "GRI 305",
+        "name": "Emissions",
+        "nameKr": "온실가스 배출",
+        "category": "E",
+        "type": "필수",
+        "description": "온실가스(Scope 1, 2, 3) 및 질소산화물(NOx), 황산화물(SOx) 등 기타 대기오염물질 배출 관리를 다룹니다."
+      },
+      {
+        "code": "GRI 306",
+        "name": "Waste",
+        "nameKr": "폐기물",
+        "category": "E",
+        "type": "필수",
+        "description": "폐기물 발생, 관리 방식 및 처리에 대한 정보를 다룹니다."
+      },
+      {
+        "code": "GRI 401",
+        "name": "Employment",
+        "nameKr": "고용",
+        "category": "S",
+        "type": "필수",
+        "description": "신규 채용, 이직, 육아휴직 등 고용 관행에 대한 정보를 다룹니다."
+      },
+      {
+        "code": "GRI 402",
+        "name": "Labor/Management Relations",
+        "nameKr": "노사 관계",
+        "category": "S",
+        "type": "필수",
+        "description": "운영상의 중요한 변경 사항에 대해 직원에게 통지하는 최소 기간을 다룹니다."
+      },
+      {
+        "code": "GRI 403",
+        "name": "Occupational Health and Safety",
+        "nameKr": "산업안전보건",
+        "category": "S",
+        "type": "필수",
+        "description": "근로자의 작업 관련 상해 및 질병 예방, 안전한 작업 환경 조성을 위한 관리 시스템을 다룹니다."
+      },
+      {
+        "code": "GRI 404",
+        "name": "Training and Education",
+        "nameKr": "훈련 및 교육",
+        "category": "S",
+        "type": "필수",
+        "description": "직원들의 기술 향상 및 경력 개발을 위한 교육 프로그램에 대한 정보를 다룹니다."
+      },
+      {
+        "code": "GRI 405",
+        "name": "Diversity and Equal Opportunity",
+        "nameKr": "다양성 및 평등한 기회",
+        "category": "S",
+        "type": "필수",
+        "description": "지배기구 및 직원의 다양성과 남녀 임금 비율 등 평등한 기회 보장에 대해 다룹니다."
+      },
+      {
+        "code": "GRI 406",
+        "name": "Non-discrimination",
+        "nameKr": "차별 금지",
+        "category": "S",
+        "type": "필수",
+        "description": "차별 사건 발생 건수 및 시정 조치에 대한 정보를 다룹니다."
+      },
+      {
+        "code": "GRI 407",
+        "name": "Freedom of Association and Collective Bargaining",
+        "nameKr": "결사의 자유 및 단체 교섭",
+        "category": "S",
+        "type": "필수",
+        "description": "결사의 자유 및 단체 교섭권이 침해될 위험이 있는 사업장과 관련 조치를 다룹니다."
+      },
+      {
+        "code": "GRI 408",
+        "name": "Child Labor",
+        "nameKr": "아동 노동",
+        "category": "S",
+        "type": "필수",
+        "description": "아동 노동의 심각한 위험이 있는 사업장 및 공급업체와 관련 해결 조치를 다룹니다."
+      },
+      {
+        "code": "GRI 409",
+        "name": "Forced or Compulsory Labor",
+        "nameKr": "강제 노동",
+        "category": "S",
+        "type": "필수",
+        "description": "강제 또는 의무 노동의 심각한 위험이 있는 사업장 및 공급업체와 관련 해결 조치를 다룹니다."
+      },
+      {
+        "code": "GRI 411",
+        "name": "Rights of Indigenous Peoples",
+        "nameKr": "원주민의 권리",
+        "category": "S",
+        "type": "필수",
+        "description": "원주민의 권리 침해 사건 및 토지 사용권 분쟁 관련 정보를 다룹니다."
+      },
+      {
+        "code": "GRI 413",
+        "name": "Local Communities",
+        "nameKr": "지역사회",
+        "category": "S",
+        "type": "필수",
+        "description": "지역사회 참여, 영향 평가 및 개발 프로그램을 포함하는 사업장에 대한 정보를 다룹니다."
+      },
+      {
+        "code": "GRI 415",
+        "name": "Public Policy",
+        "nameKr": "공공 정책",
+        "category": "S",
+        "type": "필수",
+        "description": "정치적 기부금 및 공공 정책에 대한 로비 활동 관련 정보를 다룹니다."
+      }
+    ]
+  },
+  "GRI 13": {
+    "name": "농업, 수산양식, 어업",
+    "englishName": "Agriculture, Aquaculture and Fishing",
+    "fileName": "GRI 13_ Agriculture Aquaculture and Fishing Sectors 2022.pdf",
+    "indicators": [
+      {
+        "code": "GRI 201",
+        "name": "Economic Performance",
+        "nameKr": "경제 성과",
+        "category": "G",
+        "type": "필수",
+        "description": "기후 변화로 인한 재무적 영향 및 기타 리스크와 기회 공시 (Topic 13.2)"
+      },
+      {
+        "code": "GRI 202",
+        "name": "Market Presence",
+        "nameKr": "시장 지위",
+        "category": "G",
+        "type": "필수",
+        "description": "현지 인력 고용 및 최저 임금 대비 표준 초임금 비율 공시 (Topic 13.20, 13.21)"
+      },
+      {
+        "code": "GRI 203",
+        "name": "Indirect Economic Impacts",
+        "nameKr": "간접 경제 영향",
+        "category": "G",
+        "type": "필수",
+        "description": "인프라 투자 및 서비스 지원 등 간접적 경제 영향 공시 (Topic 13.22)"
+      },
+      {
+        "code": "GRI 204",
+        "name": "Procurement Practices",
+        "nameKr": "조달 관행",
+        "category": "G",
+        "type": "필수",
+        "description": "현지 공급업체에 대한 지출 비율 등 조달 관행 공시 (Topic 13.23)"
+      },
+      {
+        "code": "GRI 205",
+        "name": "Anti-corruption",
+        "nameKr": "부패 방지",
+        "category": "G",
+        "type": "필수",
+        "description": "부패 방지 교육 및 부패 관련 확정 사건 공시 (Topic 13.26)"
+      },
+      {
+        "code": "GRI 206",
+        "name": "Anti-competitive Behavior",
+        "nameKr": "반경쟁적 행위",
+        "category": "G",
+        "type": "필수",
+        "description": "반경쟁적 행위, 반독점 및 독점 관행에 대한 법적 조치 공시 (Topic 13.25)"
+      },
+      {
+        "code": "GRI 303",
+        "name": "Water and Effluents",
+        "nameKr": "용수 및 폐수",
+        "category": "E",
+        "type": "필수",
+        "description": "수자원 관련 상호작용 및 용수 취수, 방류, 소비 공시 (Topic 13.7)"
+      },
+      {
+        "code": "GRI 304",
+        "name": "Biodiversity",
+        "nameKr": "생물다양성",
+        "category": "E",
+        "type": "필수",
+        "description": "보호지역 및 생물다양성 가치가 높은 지역 내외의 사업장과 그 영향 공시 (Topic 13.3)"
+      },
+      {
+        "code": "GRI 305",
+        "name": "Emissions",
+        "nameKr": "온실가스 배출",
+        "category": "E",
+        "type": "필수",
+        "description": "온실가스(GHG) 직접(Scope 1) 및 간접(Scope 2, 3) 배출량과 배출 집약도 공시 (Topic 13.1)"
+      },
+      {
+        "code": "GRI 306",
+        "name": "Waste",
+        "nameKr": "폐기물",
+        "category": "E",
+        "type": "필수",
+        "description": "폐기물 발생 원인과 관리 방식, 폐기물 발생량 및 처리 경로 공시 (Topic 13.8)"
+      },
+      {
+        "code": "GRI 401",
+        "name": "Employment",
+        "nameKr": "고용",
+        "category": "S",
+        "type": "필수",
+        "description": "신규 채용, 이직률 및 육아휴직 등 고용 관행 관련 정보 공시 (Topic 13.20)"
+      },
+      {
+        "code": "GRI 402",
+        "name": "Labor/Management Relations",
+        "nameKr": "노사 관계",
+        "category": "S",
+        "type": "필수",
+        "description": "중요한 운영상의 변경에 대한 최소 통지 기간 공시 (Topic 13.20)"
+      },
+      {
+        "code": "GRI 403",
+        "name": "Occupational Health and Safety",
+        "nameKr": "산업 안전 보건",
+        "category": "S",
+        "type": "필수",
+        "description": "산업 안전 보건 관리 시스템, 위험 식별 및 평가, 작업자 교육, 상해 등 공시 (Topic 13.19)"
+      },
+      {
+        "code": "GRI 404",
+        "name": "Training and Education",
+        "nameKr": "교육 및 훈련",
+        "category": "S",
+        "type": "필수",
+        "description": "정규 성과 및 경력 개발 검토를 받는 직원 비율, 고용 종료 지원 프로그램 공시 (Topic 13.20)"
+      },
+      {
+        "code": "GRI 405",
+        "name": "Diversity and Equal Opportunity",
+        "nameKr": "다양성 및 평등한 기회",
+        "category": "S",
+        "type": "필수",
+        "description": "지배기구 및 직원의 다양성 구성 비율 공시 (Topic 13.15)"
+      },
+      {
+        "code": "GRI 406",
+        "name": "Non-discrimination",
+        "nameKr": "차별 방지",
+        "category": "S",
+        "type": "필수",
+        "description": "차별 사건 및 시정 조치 현황 공시 (Topic 13.15)"
+      },
+      {
+        "code": "GRI 407",
+        "name": "Freedom of Association and Collective Bargaining",
+        "nameKr": "결사의 자유 및 단체 교섭",
+        "category": "S",
+        "type": "필수",
+        "description": "결사의 자유 및 단체 교섭권이 침해될 위험이 있는 사업장 공시 (Topic 13.18)"
+      },
+      {
+        "code": "GRI 408",
+        "name": "Child Labor",
+        "nameKr": "아동 노동",
+        "category": "S",
+        "type": "필수",
+        "description": "아동 노동 발생의 중대한 위험이 있는 사업장 및 공급업체 공시 (Topic 13.17)"
+      },
+      {
+        "code": "GRI 409",
+        "name": "Forced or Compulsory Labor",
+        "nameKr": "강제 노동",
+        "category": "S",
+        "type": "필수",
+        "description": "강제 또는 의무 노동 발생의 중대한 위험이 있는 사업장 및 공급업체 공시 (Topic 13.16)"
+      },
+      {
+        "code": "GRI 411",
+        "name": "Rights of Indigenous Peoples",
+        "nameKr": "원주민의 권리",
+        "category": "S",
+        "type": "필수",
+        "description": "원주민의 권리 침해 관련 사건 공시 (Topic 13.14)"
+      },
+      {
+        "code": "GRI 413",
+        "name": "Local Communities",
+        "nameKr": "지역 사회",
+        "category": "S",
+        "type": "필수",
+        "description": "지역 사회 참여, 영향 평가 및 개발 프로그램, 부정적 영향이 있는 사업장 공시 (Topic 13.12)"
+      },
+      {
+        "code": "GRI 415",
+        "name": "Public Policy",
+        "nameKr": "공공 정책",
+        "category": "S",
+        "type": "필수",
+        "description": "정치 기부금 관련 정보 공시 (Topic 13.24)"
+      },
+      {
+        "code": "GRI 416",
+        "name": "Customer Health and Safety",
+        "nameKr": "소비자 건강과 안전",
+        "category": "S",
+        "type": "필수",
+        "description": "제품 및 서비스의 건강/안전 영향 평가, 규정 위반 사건 공시 (Topic 13.10)"
+      }
+    ]
+  },
+  "GRI 14": {
+    "name": "광업",
+    "englishName": "Mining",
+    "fileName": "GRI 14_ Mining Sector 2024 - English.pdf",
+    "indicators": [
+      {
+        "code": "GRI 201",
+        "name": "Economic Performance",
+        "nameKr": "경제 성과",
+        "category": "G",
+        "type": "필수",
+        "description": "조직의 경제적 영향과 성과에 대한 공시를 다룹니다. (Topic 14.9 Economic impacts 연관)"
+      },
+      {
+        "code": "GRI 205",
+        "name": "Anti-corruption",
+        "nameKr": "반부패",
+        "category": "G",
+        "type": "필수",
+        "description": "부패 리스크 평가, 커뮤니케이션, 교육 등 부패 방지 노력에 대한 공시를 다룹니다. (Topic 14.22 Anti-corruption 연관)"
+      },
+      {
+        "code": "GRI 207",
+        "name": "Tax",
+        "nameKr": "세금",
+        "category": "G",
+        "type": "필수",
+        "description": "세금 전략, 거버넌스, 국가별 보고 등 세금 투명성에 대한 공시를 다룹니다. (Topic 14.23 Payments to governments 연관)"
+      },
+      {
+        "code": "GRI 303",
+        "name": "Water and Effluents",
+        "nameKr": "용수 및 폐수",
+        "category": "E",
+        "type": "필수",
+        "description": "물 취수, 소비, 방류 등 물과 관련된 영향 관리에 대한 공시를 다룹니다. (Topic 14.7 Water and effluents 연관)"
+      },
+      {
+        "code": "GRI 304",
+        "name": "Biodiversity",
+        "nameKr": "생물다양성",
+        "category": "E",
+        "type": "필수",
+        "description": "사업장이 위치하거나 인접한 보호 지역, 생물다양성에 미치는 영향에 대한 공시를 다룹니다. (Topic 14.4 Biodiversity 연관)"
+      },
+      {
+        "code": "GRI 305",
+        "name": "Emissions",
+        "nameKr": "배출물",
+        "category": "E",
+        "type": "필수",
+        "description": "온실가스(GHG), 오존층 파괴 물질(ODS), 질소산화물(NOx), 황산화물(SOx) 등 대기 배출물에 대한 공시를 다룹니다. (Topic 14.1 GHG emissions & Topic 14.3 Air emissions 연관)"
+      },
+      {
+        "code": "GRI 306",
+        "name": "Waste",
+        "nameKr": "폐기물",
+        "category": "E",
+        "type": "필수",
+        "description": "폐기물 발생, 관리 및 처분 등 폐기물 관련 영향에 대한 공시를 다룹니다. (Topic 14.5 Waste 연관)"
+      },
+      {
+        "code": "GRI 401",
+        "name": "Employment",
+        "nameKr": "고용",
+        "category": "S",
+        "type": "필수",
+        "description": "고용 형태, 신규 채용, 이직률, 복리후생 등 고용 관행에 대한 공시를 다룹니다. (Topic 14.17 Employment practices 연관)"
+      },
+      {
+        "code": "GRI 403",
+        "name": "Occupational Health and Safety",
+        "nameKr": "산업 보건 및 안전",
+        "category": "S",
+        "type": "필수",
+        "description": "작업장 내 안전보건 경영시스템, 위험 식별, 재해 예방 및 근로자 건강 관리에 대한 공시를 다룹니다. (Topic 14.16 Occupational health and safety 연관)"
+      },
+      {
+        "code": "GRI 405",
+        "name": "Diversity and Equal Opportunity",
+        "nameKr": "다양성 및 평등 기회",
+        "category": "S",
+        "type": "필수",
+        "description": "성별, 연령대별 인력 구성 및 차별 금지 정책에 대한 공시를 다룹니다. (Topic 14.21 Non-discrimination and equal opportunity 연관)"
+      },
+      {
+        "code": "GRI 407",
+        "name": "Freedom of Association and Collective Bargaining",
+        "nameKr": "결사의 자유 및 단체 교섭",
+        "category": "S",
+        "type": "필수",
+        "description": "근로자의 결사의 자유와 단체 교섭권이 침해될 위험이 있는 사업장에 대한 공시를 다룹니다. (Topic 14.20 Freedom of association and collective bargaining 연관)"
+      },
+      {
+        "code": "GRI 408",
+        "name": "Child Labor",
+        "nameKr": "아동 노동",
+        "category": "S",
+        "type": "필수",
+        "description": "아동 노동 발생 위험이 있는 사업장 및 관련 정책에 대한 공시를 다룹니다. (Topic 14.18 Child labor 연관)"
+      },
+      {
+        "code": "GRI 409",
+        "name": "Forced or Compulsory Labor",
+        "nameKr": "강제 노동",
+        "category": "S",
+        "type": "필수",
+        "description": "강제 또는 의무 노동 발생 위험이 있는 사업장 및 관련 정책에 대한 공시를 다룹니다. (Topic 14.19 Forced labor and modern slavery 연관)"
+      },
+      {
+        "code": "GRI 410",
+        "name": "Security Practices",
+        "nameKr": "보안 관행",
+        "category": "S",
+        "type": "필수",
+        "description": "보안 인력의 인권 정책 교육 및 훈련에 대한 공시를 다룹니다. (Topic 14.14 Security practices 연관)"
+      },
+      {
+        "code": "GRI 411",
+        "name": "Rights of Indigenous Peoples",
+        "nameKr": "원주민의 권리",
+        "category": "S",
+        "type": "필수",
+        "description": "원주민의 권리 침해 사건, 자유의사에 따른 사전인지동의(FPIC) 협약 등에 대한 공시를 다룹니다. (Topic 14.11 Rights of Indigenous Peoples 연관)"
+      },
+      {
+        "code": "GRI 412",
+        "name": "Human Rights Assessment",
+        "nameKr": "인권 평가",
+        "category": "S",
+        "type": "필수",
+        "description": "인권 실사, 검토 또는 영향 평가를 받은 사업장에 대한 공시를 다룹니다. (Topic 14.25 Conflict-affected and high-risk areas 연관)"
+      },
+      {
+        "code": "GRI 413",
+        "name": "Local Communities",
+        "nameKr": "지역 사회",
+        "category": "S",
+        "type": "필수",
+        "description": "지역사회 참여, 영향 평가, 개발 프로그램 등 지역사회와의 관계에 대한 공시를 다룹니다. (Topic 14.10 Local communities 연관)"
+      },
+      {
+        "code": "GRI 415",
+        "name": "Public Policy",
+        "nameKr": "공공 정책",
+        "category": "S",
+        "type": "필수",
+        "description": "정치 기부금, 로비 활동 등 공공 정책에 대한 조직의 영향력 행사에 대한 공시를 다룹니다. (Topic 14.24 Public policy 연관)"
+      }
+    ]
+  }
+}
