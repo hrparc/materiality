@@ -168,7 +168,7 @@ async function processAllGRI() {
 
   for (const [key, sectorInfo] of Object.entries(GRI_SECTORS)) {
     try {
-      const pdfPath = path.join(ROOT_DIR, 'GRI', sectorInfo.fileName);
+      const pdfPath = path.join(ROOT_DIR, 'standards', 'GRI', sectorInfo.fileName);
       console.log(`\n처리 중: ${sectorInfo.fileName}`);
 
       const pdfData = await parsePDF(pdfPath);
@@ -210,7 +210,7 @@ async function processAllSASB() {
 
   for (const industryInfo of SASB_INDUSTRIES) {
     try {
-      const pdfPath = path.join(ROOT_DIR, 'SASB', industryInfo.fileName);
+      const pdfPath = path.join(ROOT_DIR, 'standards', 'SASB', industryInfo.fileName);
       console.log(`\n처리 중: ${industryInfo.fileName}`);
 
       const pdfData = await parsePDF(pdfPath);

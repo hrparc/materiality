@@ -30,7 +30,7 @@ const processGRI = async (ragService) => {
   console.log('📚 GRI 문서 처리 시작 (영문)');
   console.log('='.repeat(60));
 
-  const griDir = path.join(ROOT_DIR, 'GRI');
+  const griDir = path.join(ROOT_DIR, 'standards', 'GRI');
   const pdfFiles = getPDFFiles(griDir);
 
   console.log(`찾은 PDF 파일: ${pdfFiles.length}개`);
@@ -65,7 +65,7 @@ const processSASB = async (ragService) => {
   console.log('📚 SASB 문서 처리 시작 (한국어)');
   console.log('='.repeat(60));
 
-  const sasbDir = path.join(ROOT_DIR, 'SASB');
+  const sasbDir = path.join(ROOT_DIR, 'standards', 'SASB');
   const pdfFiles = getPDFFiles(sasbDir);
 
   console.log(`찾은 PDF 파일: ${pdfFiles.length}개`);
@@ -96,7 +96,7 @@ const processISSB = async (ragService) => {
   console.log('📚 ISSB 문서 처리 시작 (한국어)');
   console.log('='.repeat(60));
 
-  const issbDir = path.join(ROOT_DIR, 'ISSB');
+  const issbDir = path.join(ROOT_DIR, 'standards', 'ISSB');
   const pdfFiles = getPDFFiles(issbDir);
 
   console.log(`찾은 PDF 파일: ${pdfFiles.length}개`);
@@ -127,7 +127,7 @@ const processKSSB = async (ragService) => {
   console.log('📚 KSSB 문서 처리 시작 (한국어)');
   console.log('='.repeat(60));
 
-  const kssbDir = path.join(ROOT_DIR, 'KSSB');
+  const kssbDir = path.join(ROOT_DIR, 'standards', 'KSSB');
   const pdfFiles = getPDFFiles(kssbDir);
 
   console.log(`찾은 PDF 파일: ${pdfFiles.length}개`);
