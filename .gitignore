@@ -1,0 +1,11 @@
+# PDF 파일들 (이미 Pinecone에 벡터화됨)
+GRI/
+SASB/
+ISSB/
+KSSB/
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
