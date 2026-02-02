@@ -1,0 +1,29 @@
+{
+  "name": "esg-materiality-backend",
+  "version": "1.0.0",
+  "description": "ESG 이중 중대성 평가 서비스 백엔드",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "setup-rag": "node scripts/setup-rag.js",
+    "upload-documents": "node scripts/upload-documents.js",
+    "test-api": "node scripts/test-api.js",
+    "extract-indicators": "node scripts/extract-indicators.js"
+  },
+  "keywords": ["esg", "materiality", "rag", "ai"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@pinecone-database/pinecone": "^2.0.1",
+    "@google/generative-ai": "^0.1.3",
+    "pdf-parse": "^1.1.1",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}

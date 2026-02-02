@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESG API 테스트 페이지</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .test-section {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #2563eb;
+            font-size: 20px;
+            margin-bottom: 16px;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 8px;
+        }
+
+        .input-group {
+            margin-bottom: 16px;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #374151;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        button:disabled {
+            background: #9ca3af;
+            cursor: not-allowed;
+        }
+
+        .result {
+            margin-top: 20px;
+            padding: 16px;
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            max-height: 500px;
+            overflow-y: auto;
+        }
+
+        .result pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        .loading {
+            color: #2563eb;
+            font-weight: 600;
+        }
+
+        .error {
+            color: #dc2626;
+            font-weight: 600;
+        }
+
+        .success {
+            color: #16a34a;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧪 ESG API 테스트 페이지</h1>
+
+        <!-- 헬스 체크 -->
+        <div class="test-section">
+            <h2>1. 헬스 체크</h2>
+            <button onclick="testHealth()">서버 상태 확인</button>
+            <div id="health-result" class="result" style="display: none;"></div>
+        </div>
+
+        <!-- 산업군 기반 이슈 추천 -->
+        <div class="test-section">
+            <h2>2. 산업군 기반 이슈 추천</h2>
+            <div class="input-group">
+                <label for="industry">산업군 (SASB 40개 산업):</label>
+                <select id="industry">
+                    <option value="">로딩 중...</option>
+                </select>
+            </div>
+            <button onclick="testRecommendByIndustry()">이슈 추천 받기</button>
+            <div id="industry-result" class="result" style="display: none;"></div>
+        </div>
+
+        <!-- 이슈별 표준 매칭 -->
+        <div class="test-section">
+            <h2>3. 이슈별 표준 매칭</h2>
+            <div class="input-group">
+                <label for="issue">이슈명:</label>
+                <select id="issue">
+                    <option value="온실가스 배출">온실가스 배출</option>
+                    <option value="산업안전보건">산업안전보건</option>
+                    <option value="데이터 프라이버시">데이터 프라이버시</option>
+                    <option value="에너지 효율">에너지 효율</option>
+                </select>
+            </div>
+            <button onclick="testMatchStandards()">표준 매칭하기</button>
+            <div id="match-result" class="result" style="display: none;"></div>
+        </div>
+
+        <!-- 미디어 분석 -->
+        <div class="test-section">
+            <h2>4. 뉴스 분석 (Mock 데이터)</h2>
+            <div class="input-group">
+                <label for="keyword">키워드:</label>
+                <input type="text" id="keyword" value="삼성전자" placeholder="예: 삼성전자">
+            </div>
+            <button onclick="testAnalyzeNews()">뉴스 분석하기</button>
+            <div id="news-result" class="result" style="display: none;"></div>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE = 'http://localhost:3001';
+
+        // 페이지 로드 시 산업 목록 불러오기
+        async function loadIndustries() {
+            try {
+                const { data } = await apiRequest('/api/industries');
+                const select = document.getElementById('industry');
+                select.innerHTML = '<option value="">산업을 선택하세요</option>';
+
+                data.industries.forEach(industry => {
+                    const option = document.createElement('option');
+                    option.value = industry.id;
+                    option.textContent = industry.display;
+                    select.appendChild(option);
+                });
+            } catch (error) {
+                console.error('산업 목록 로드 실패:', error);
+            }
+        }
+
+        // 페이지 로드 시 실행
+        window.addEventListener('DOMContentLoaded', loadIndustries);
+
+        async function apiRequest(endpoint, method = 'GET', body = null) {
+            const options = {
+                method,
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            };
+
+            if (body) {
+                options.body = JSON.stringify(body);
+            }
+
+            const response = await fetch(`${API_BASE}${endpoint}`, options);
+            const data = await response.json();
+            return { status: response.status, data };
+        }
+
+        function showResult(elementId, content, type = 'success') {
+            const element = document.getElementById(elementId);
+            element.style.display = 'block';
+            element.innerHTML = `<div class="${type}">${content}</div>`;
+        }
+
+        function showLoading(elementId) {
+            showResult(elementId, '⏳ 로딩 중...', 'loading');
+        }
+
+        async function testHealth() {
+            const resultId = 'health-result';
+            showLoading(resultId);
+
+            try {
+                const { status, data } = await apiRequest('/health');
+                const html = `
+                    <div class="success">✅ 서버 정상 작동</div>
+                    <pre>${JSON.stringify(data, null, 2)}</pre>
+                `;
+                showResult(resultId, html, 'success');
+            } catch (error) {
+                showResult(resultId, `❌ 오류: ${error.message}`, 'error');
+            }
+        }
+
+        async function testRecommendByIndustry() {
+            const resultId = 'industry-result';
+            const industryId = document.getElementById('industry').value;
+            showLoading(resultId);
+
+            try {
+                const { status, data } = await apiRequest('/api/issues/recommend-by-industry', 'POST', {
+                    industryId
+                });
+
+                if (data.success) {
+                    let html = `<div class="success">✅ ${data.totalResults}개 이슈 추천 완료</div>`;
+                    html += '<pre>' + JSON.stringify(data, null, 2) + '</pre>';
+                    showResult(resultId, html, 'success');
+                } else {
+                    showResult(resultId, `❌ 오류: ${JSON.stringify(data)}`, 'error');
+                }
+            } catch (error) {
+                showResult(resultId, `❌ 오류: ${error.message}`, 'error');
+            }
+        }
+
+        async function testMatchStandards() {
+            const resultId = 'match-result';
+            const issue = document.getElementById('issue').value;
+            showLoading(resultId);
+
+            try {
+                const { status, data } = await apiRequest('/api/issues/match-standards', 'POST', {
+                    issue,
+                    topK: 3
+                });
+
+                if (data.success) {
+                    let html = `<div class="success">✅ 표준 매칭 완료</div>`;
+                    html += '<pre>' + JSON.stringify(data, null, 2) + '</pre>';
+                    showResult(resultId, html, 'success');
+                } else {
+                    showResult(resultId, `❌ 오류: ${JSON.stringify(data)}`, 'error');
+                }
+            } catch (error) {
+                showResult(resultId, `❌ 오류: ${error.message}`, 'error');
+            }
+        }
+
+        async function testAnalyzeNews() {
+            const resultId = 'news-result';
+            const keyword = document.getElementById('keyword').value;
+            showLoading(resultId);
+
+            try {
+                const { status, data } = await apiRequest('/api/media/analyze-news', 'POST', {
+                    keyword,
+                    maxResults: 10,
+                    analyzeWithAI: true
+                });
+
+                if (data.success) {
+                    let html = `<div class="success">✅ 뉴스 분석 완료</div>`;
+                    html += `<p>총 ${data.stats.totalNews}개 중 ${data.stats.esgRelatedNews}개 ESG 관련</p>`;
+                    html += '<pre>' + JSON.stringify(data, null, 2) + '</pre>';
+                    showResult(resultId, html, 'success');
+                } else {
+                    showResult(resultId, `❌ 오류: ${JSON.stringify(data)}`, 'error');
+                }
+            } catch (error) {
+                showResult(resultId, `❌ 오류: ${error.message}`, 'error');
+            }
+        }
+    </script>
+</body>
+</html>
