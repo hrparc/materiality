@@ -14,18 +14,28 @@
     "label-issues": "node scripts/label-issues.js",
     "test-media-analyze": "node scripts/test-media-analyze.js",
     "test-news-search": "node scripts/test-news-search.js",
-    "test-recommend-issues": "node scripts/test-recommend-issues.js"
+    "test-recommend-issues": "node scripts/test-recommend-issues.js",
+    "test-report-upload": "node scripts/test-report-upload.js",
+    "test-batch-upload": "node scripts/test-batch-upload.js"
   },
-  "keywords": ["esg", "materiality", "rag", "ai"],
+  "keywords": [
+    "esg",
+    "materiality",
+    "rag",
+    "ai"
+  ],
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@pinecone-database/pinecone": "^2.0.1",
     "@google/generative-ai": "^0.1.3",
-    "pdf-parse": "^1.1.1",
+    "@pinecone-database/pinecone": "^2.0.1",
+    "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
-    "cors": "^2.8.5"
+    "form-data": "^4.0.5",
+    "multer": "^2.0.2",
+    "pdf-parse": "^1.1.1",
+    "uuid": "^13.0.0"
   },
   "devDependencies": {
     "nodemon": "^3.0.2"

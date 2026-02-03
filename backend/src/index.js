@@ -7,6 +7,7 @@ import { RAGService } from './services/rag-service.js';
 import issueRoutes from './routes/issue-routes.js';
 import mediaRoutes from './routes/media-routes.js';
 import industryRoutes from './routes/industry-routes.js';
+import reportRoutes from './routes/report-routes.js';
 
 dotenv.config();
 
@@ -67,6 +68,7 @@ app.get('/health', (req, res) => {
 app.use('/api/issues', issueRoutes);
 app.use('/api/media', mediaRoutes);
 app.use('/api/industries', industryRoutes);
+app.use('/api/reports', reportRoutes);
 
 // 404 에러 핸들러
 app.use((req, res) => {
