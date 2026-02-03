@@ -8,33 +8,86 @@ import { initGemini } from '../config/gemini.js';
 
 /**
  * 키워드 기반 뉴스 분석
- * POST /api/media/analyze-news
+ * POST /api/media/analyze or POST /api/media/analyze-news
  */
 export const analyzeNews = async (req, res) => {
   try {
-    const { keyword, maxResults = 50, analyzeWithAI = true } = req.body;
+    const { keyword, maxResults = 50, analyzeWithAI = true, period = 'y1' } = req.body;
 
     // 입력 검증
     if (!keyword) {
       return res.status(400).json({
+        success: false,
         error: 'Bad Request',
         message: '키워드(keyword) 정보가 필요합니다.',
+        example: {
+          keyword: '삼성전자',
+          period: 'y1',
+          maxResults: 50
+        }
       });
     }
 
-    console.log(`\n📰 뉴스 분석 요청: "${keyword}"`);
+    // period 유효성 검사
+    const validPeriods = ['y1', 'm6', 'm3', 'm1'];
+    if (!validPeriods.includes(period)) {
+      return res.status(400).json({
+        success: false,
+        error: 'Bad Request',
+        message: `유효하지 않은 기간입니다. 사용 가능한 값: ${validPeriods.join(', ')}`,
+      });
+    }
+
+    console.log(`\n📰 뉴스 분석 요청: "${keyword}" (기간: ${period}, 최대: ${maxResults}개)`);
 
     // NewsScraper 초기화
     const genAI = initGemini();
     const scraper = new NewsScraper(genAI);
 
-    // 뉴스 검색
-    const newsArticles = await scraper.searchNews(keyword, maxResults);
+    // 뉴스 검색 (기간 포함)
+    let newsArticles;
+    try {
+      newsArticles = await scraper.searchNews(keyword, maxResults, period);
+    } catch (searchError) {
+      console.error('❌ 뉴스 검색 실패:', searchError);
+      return res.status(500).json({
+        success: false,
+        error: 'Search Failed',
+        message: `뉴스 검색에 실패했습니다: ${searchError.message}`,
+        details: searchError.toString(),
+      });
+    }
+
+    if (!newsArticles || newsArticles.length === 0) {
+      return res.json({
+        success: true,
+        keyword,
+        period,
+        stats: {
+          totalNews: 0,
+          esgRelatedNews: 0,
+          byCategory: { E: 0, S: 0, G: 0 },
+          bySentiment: { positive: 0, negative: 0, neutral: 0 },
+        },
+        news: [],
+        message: '검색 결과가 없습니다. 키워드를 변경해보세요.',
+        timestamp: new Date().toISOString(),
+      });
+    }
 
     // AI 분석 (옵션)
     let analyzedNews = newsArticles;
     if (analyzeWithAI) {
-      analyzedNews = await scraper.analyzeNews(newsArticles);
+      try {
+        analyzedNews = await scraper.analyzeNews(newsArticles);
+      } catch (analysisError) {
+        console.error('⚠️  AI 분석 실패, 원본 데이터 반환:', analysisError.message);
+        // AI 분석 실패 시에도 검색 결과는 반환
+        analyzedNews = newsArticles.map(article => ({
+          ...article,
+          analysis: null,
+        }));
+      }
     }
 
     // ESG 관련 뉴스만 필터링
@@ -177,6 +230,75 @@ export const searchIssueNews = async (req, res) => {
     res.status(500).json({
       error: 'Internal Server Error',
       message: error.message,
+    });
+  }
+};
+
+/**
+ * 미디어 기반 이슈 추천
+ * POST /api/media/recommend-issues
+ */
+export const recommendIssues = async (req, res) => {
+  try {
+    const { keyword, maxResults = 50, topN = 10 } = req.body;
+
+    // 입력 검증
+    if (!keyword) {
+      return res.status(400).json({
+        success: false,
+        error: 'Bad Request',
+        message: '키워드(keyword)가 필요합니다.',
+        example: {
+          keyword: '삼성전자',
+          maxResults: 50,
+          topN: 10
+        }
+      });
+    }
+
+    console.log(`\n🎯 미디어 기반 이슈 추천 요청: "${keyword}"`);
+
+    // NewsScraper 초기화
+    const genAI = initGemini();
+    const scraper = new NewsScraper(genAI);
+
+    // 1. 뉴스 검색
+    const newsArticles = await scraper.searchNews(keyword, maxResults);
+
+    if (!newsArticles || newsArticles.length === 0) {
+      return res.json({
+        success: true,
+        keyword,
+        recommendedIssues: [],
+        message: '검색 결과가 없습니다.',
+        timestamp: new Date().toISOString(),
+      });
+    }
+
+    // 2. AI 분석
+    const analyzedNews = await scraper.analyzeNews(newsArticles);
+
+    // 3. 이슈 빈도수 집계 및 추천
+    const recommendedIssues = scraper.recommendTopIssues(analyzedNews, topN);
+
+    console.log(`✅ ${recommendedIssues.length}개 이슈 추천 완료\n`);
+
+    res.json({
+      success: true,
+      keyword,
+      totalNews: newsArticles.length,
+      analyzedNews: analyzedNews.length,
+      recommendedIssues,
+      timestamp: new Date().toISOString(),
+    });
+
+  } catch (error) {
+    console.error('❌ 이슈 추천 실패:', error);
+    res.status(500).json({
+      success: false,
+      error: 'Internal Server Error',
+      message: error.message,
+      details: error.stack,
     });
   }
 };

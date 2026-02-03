@@ -11,7 +11,10 @@
     "upload-documents": "node scripts/upload-documents.js",
     "test-api": "node scripts/test-api.js",
     "extract-indicators": "node scripts/extract-indicators.js",
-    "label-issues": "node scripts/label-issues.js"
+    "label-issues": "node scripts/label-issues.js",
+    "test-media-analyze": "node scripts/test-media-analyze.js",
+    "test-news-search": "node scripts/test-news-search.js",
+    "test-recommend-issues": "node scripts/test-recommend-issues.js"
   },
   "keywords": ["esg", "materiality", "rag", "ai"],
   "author": "",

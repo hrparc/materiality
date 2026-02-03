@@ -131,23 +131,41 @@
     ```
 
 ### 1.2 미디어 분석 기능
-- [ ] **뉴스 스크래핑 API 개선**
-  - `POST /api/media/analyze`
-  - 현재 news-scraper.js 개선
-  - 요청 파라미터: `keyword` (기업명/업종명), `period` (기본 1년)
-  - Puppeteer로 네이버/구글 뉴스 크롤링
-  - 최근 1년간 뉴스 수집
+- [x] **뉴스 스크래핑 API 구현** ✅ 완료
+  - `POST /api/media/analyze` 엔드포인트 구현 ✅
+  - **네이버 뉴스 검색 API 통합** (Google API 대체) ✅
+  - 요청 파라미터: `keyword` (기업명/업종명), `period` (기본 1년), `maxResults` ✅
+  - HTML 태그 제거 및 날짜 파싱 로직 구현 ✅
+  - 실시간 뉴스 검색 정상 작동 확인 ✅
+  - 파일: [news-scraper.js](../backend/src/services/news-scraper.js)
+  - 테스트: `npm run test-media-analyze`
 
-- [ ] **뉴스 ESG 분류 및 감정 분석**
-  - Gemini 2.5 Flash Lite로 뉴스 기사 ESG 카테고리 자동 분류
-  - 긍정/부정/중립 감정 분석
-  - 빈도수 집계 및 1~5점 점수 산출
-  - PRD 2.3항의 미디어 점수 정규화 기준 적용
+- [x] **뉴스 ESG 분류 및 감정 분석** ✅ 완료
+  - Gemini 2.0 Flash Lite로 뉴스 기사 ESG 카테고리 자동 분류 ✅
+  - E/S/G 카테고리 자동 분류 ✅
+  - 긍정/부정/중립 감정 분석 ✅
+  - 관련성 점수(1~5점) 자동 산출 ✅
+  - ESG 관련 이슈 자동 추출 ✅
+  - 응답 형식:
+    ```json
+    {
+      "success": true,
+      "keyword": "삼성전자",
+      "stats": {
+        "totalNews": 50,
+        "esgRelatedNews": 25,
+        "byCategory": { "E": 10, "S": 8, "G": 7 },
+        "bySentiment": { "positive": 5, "negative": 15, "neutral": 5 }
+      },
+      "news": [...]
+    }
+    ```
 
 - [ ] **미디어 기반 이슈 추천 로직**
-  - 뉴스 분석 결과 → ESG 이슈 후보 매칭
+  - 뉴스 분석 결과 → ESG 이슈 후보 도출
   - 원문 기사 링크 및 헤드라인 저장
   - 빈도수 높은 이슈 우선 추천
+  - PRD 2.3항의 미디어 점수 정규화 기준 적용
 
 ### 1.3 보고서 AI 분석
 - [ ] **PDF 업로드 API**
