@@ -7,10 +7,12 @@
 
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useProject } from '../contexts/ProjectContext';
 import api from '../services/api';
 
 const ProjectListPage = () => {
   const navigate = useNavigate();
+  const { setProjectId, setProjectName, setSelectedIndustry } = useProject();
 
   // 프로젝트 목록 (나중에 API에서 가져옴)
   const [projects, setProjects] = useState([
@@ -84,13 +86,23 @@ const ProjectListPage = () => {
     setShowCreateForm(false);
     setFormData({ name: '', category: '', industry: '' });
 
+    // Context에 프로젝트 정보 저장
+    setProjectId(newProject.id);
+    setProjectName(newProject.name);
+    setSelectedIndustry(newProject.industry);
+
     // 프로젝트로 이동
     navigate(`/project/${newProject.id}/issues`);
   };
 
   // 프로젝트 클릭
-  const handleProjectClick = (projectId) => {
-    navigate(`/project/${projectId}/issues`);
+  const handleProjectClick = (project) => {
+    // Context에 프로젝트 정보 저장
+    setProjectId(project.id);
+    setProjectName(project.name);
+    setSelectedIndustry(project.industry);
+
+    navigate(`/project/${project.id}/issues`);
   };
 
   return (
@@ -211,7 +223,7 @@ const ProjectListPage = () => {
                 <div
                   key={project.id}
                   style={styles.projectCard}
-                  onClick={() => handleProjectClick(project.id)}
+                  onClick={() => handleProjectClick(project)}
                 >
                   <h3 style={styles.projectName}>{project.name}</h3>
                   <p style={styles.projectIndustry}>{project.industry}</p>
