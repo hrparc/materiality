@@ -22,7 +22,8 @@ const ProjectListPage = () => {
   const [showCreateForm, setShowCreateForm] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
-    industry: '',
+    category: '', // 상위 섹터 (예: 헬스케어)
+    industry: '', // 하위 섹터 (예: [헬스케어] 의료장비 및 용품)
   });
   const [industries, setIndustries] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -40,6 +41,27 @@ const ProjectListPage = () => {
     };
     fetchIndustries();
   }, []);
+
+  // 상위 섹터 목록 (중복 제거)
+  const categories = React.useMemo(() => {
+    const uniqueCategories = [...new Set(industries.map((ind) => ind.category))];
+    return uniqueCategories.sort();
+  }, [industries]);
+
+  // 선택된 상위 섹터에 속하는 하위 섹터 목록
+  const subIndustries = React.useMemo(() => {
+    if (!formData.category) return [];
+    return industries.filter((ind) => ind.category === formData.category);
+  }, [industries, formData.category]);
+
+  // 상위 섹터 변경 시 하위 섹터 초기화
+  const handleCategoryChange = (e) => {
+    setFormData({
+      ...formData,
+      category: e.target.value,
+      industry: '', // 하위 섹터 초기화
+    });
+  };
 
   // 프로젝트 생성
   const handleCreateProject = (e) => {
@@ -60,7 +82,7 @@ const ProjectListPage = () => {
 
     setProjects([newProject, ...projects]);
     setShowCreateForm(false);
-    setFormData({ name: '', industry: '' });
+    setFormData({ name: '', category: '', industry: '' });
 
     // 프로젝트로 이동
     navigate(`/project/${newProject.id}/issues`);
@@ -105,16 +127,37 @@ const ProjectListPage = () => {
                 </div>
 
                 <div style={styles.formGroup}>
-                  <label style={styles.label}>산업군 선택 *</label>
+                  <label style={styles.label}>1단계: 상위 섹터 선택 *</label>
+                  <select
+                    value={formData.category}
+                    onChange={handleCategoryChange}
+                    style={styles.select}
+                  >
+                    <option value="">-- 상위 섹터를 선택하세요 --</option>
+                    {categories.map((category, index) => (
+                      <option key={index} value={category}>
+                        {category}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                <div style={styles.formGroup}>
+                  <label style={styles.label}>2단계: 산업군 선택 *</label>
                   <select
                     value={formData.industry}
                     onChange={(e) =>
                       setFormData({ ...formData, industry: e.target.value })
                     }
                     style={styles.select}
+                    disabled={!formData.category}
                   >
-                    <option value="">-- 산업군을 선택하세요 --</option>
-                    {industries.map((industry, index) => (
+                    <option value="">
+                      {formData.category
+                        ? '-- 산업군을 선택하세요 --'
+                        : '-- 먼저 상위 섹터를 선택하세요 --'}
+                    </option>
+                    {subIndustries.map((industry, index) => (
                       <option key={index} value={industry.name}>
                         {industry.name}
                       </option>
@@ -130,7 +173,7 @@ const ProjectListPage = () => {
                     type="button"
                     onClick={() => {
                       setShowCreateForm(false);
-                      setFormData({ name: '', industry: '' });
+                      setFormData({ name: '', category: '', industry: '' });
                     }}
                     style={styles.buttonSecondary}
                   >
