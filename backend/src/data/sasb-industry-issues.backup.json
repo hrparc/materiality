@@ -16,10 +16,7 @@
           "FN-IN-270a.2",
           "FN-IN-270a.3",
           "FN-IN-270a.4"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "투명한 정보 제공 및 공정한 자문은 인권 관련 이슈와 직접적인 관련이 없으며, 기후/환경 관련 이슈도 아닙니다."
+        ]
       },
       {
         "이슈명": "투자 관리에 환경, 사회, 지배구조 요소 포함",
@@ -31,10 +28,7 @@
         "관련_지표": [
           "FN-IN-410a.1",
           "FN-IN-410a.2"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "투자 관리에 ESG 요소를 포함하는 것은 인권 문제와 직접적인 관련이 적습니다."
+        ]
       },
       {
         "이슈명": "책임감 있는 행동을 장려하기 위한 약관",
@@ -46,10 +40,7 @@
         "관련_지표": [
           "FN-IN-410b.1",
           "FN-IN-410b.2"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "이슈는 건강, 안전, 환경 보호 활동을 장려하지만, 직접적으로 인권 침해와 관련된 내용은 포함하지 않습니다."
+        ]
       },
       {
         "이슈명": "환경 위험 노출",
@@ -63,10 +54,7 @@
           "FN-IN-450a.1",
           "FN-IN-450a.2",
           "FN-IN-450a.3"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "자연재해의 경제적 영향에 대한 관리는 인권과 직접적인 관련이 없지만, 기후/환경 관련 이슈에 해당합니다."
+        ]
       },
       {
         "이슈명": "시스템 위험 관리",
@@ -80,10 +68,7 @@
           "FN-IN-550a.1",
           "FN-IN-550a.2",
           "FN-IN-550a.3"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "시스템 위험 관리는 인권 관련 이슈와 직접적인 관련이 없습니다."
+        ]
       }
     ]
   },
@@ -101,10 +86,7 @@
         "관련_지표": [
           "FN-CB-230a.1",
           "FN-CB-230a.2"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "데이터 보안은 개인정보보호와 관련되어 있어 인권 관련 이슈에 해당합니다."
+        ]
       },
       {
         "이슈명": "금융 포용 및 역량 구축",
@@ -120,10 +102,7 @@
           "FN-CB-240a.2",
           "FN-CB-240a.3",
           "FN-CB-240a.4"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "금융 포용 및 역량 구축은 인권 관련 직접적인 이슈로 보기 어렵습니다. 기후/환경 관련 이슈도 아닙니다."
+        ]
       },
       {
         "이슈명": "신용 분석에 환경, 사회, 지배구조 요소 포함",
@@ -135,10 +114,7 @@
         "관련_지표": [
           "FN-CB-410a.1",
           "FN-CB-410a.2"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "신용 분석에 ESG 요소를 포함하는 것은 인권 문제와 직접적인 관련이 없어 보입니다."
+        ]
       },
       {
         "이슈명": "기업 윤리",
@@ -150,10 +126,7 @@
         "관련_지표": [
           "FN-CB-510a.1",
           "FN-CB-510a.2"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "기업 윤리 이슈는 인권 관련 이슈와 직접적인 연관성이 낮고, 기후/환경 관련 이슈도 아님."
+        ]
       },
       {
         "이슈명": "시스템 위험 관리",
@@ -165,10 +138,7 @@
         "관련_지표": [
           "FN-CB-550a.1",
           "FN-CB-550a.2"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "시스템 위험 관리는 인권 관련 이슈와 직접적인 연관성이 없습니다."
+        ]
       }
     ]
   },
@@ -188,10 +158,7 @@
           "FN-EX-410a.2",
           "FN-EX-410a.3",
           "FN-EX-410a.4"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "투명하고 효율적인 자본시장 촉진은 인권 이슈와 직접적인 관련이 없습니다."
+        ]
       },
       {
         "이슈명": "이해충돌 관리",
@@ -203,10 +170,7 @@
         "관련_지표": [
           "FN-EX-510a.1",
           "FN-EX-510a.2"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "이해충돌 관리는 인권 관련 이슈와 직접적인 관련이 없으며, 기후/환경 관련 이슈도 아닙니다."
+        ]
       },
       {
         "이슈명": "사업 연속성 및 기술위험 관리",
@@ -220,10 +184,7 @@
           "FN-EX-550a.1",
           "FN-EX-550a.2",
           "FN-EX-550a.3"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "데이터 침해로부터 고객 정보를 보호하는 것은 개인정보보호와 관련되어 인권 관련 이슈에 해당합니다."
+        ]
       }
     ]
   },
@@ -239,10 +200,7 @@
         ],
         "관련_지표": [
           "FN-IB-330a.1"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "종업원 다양성 및 포용성은 성별 및 인종 차별 금지와 관련된 인권 이슈에 해당합니다."
+        ]
       },
       {
         "이슈명": "투자은행 및 중개 산업 활동의 환경, 사회, 지배구조 요소 포함",
@@ -256,10 +214,7 @@
           "FN-IB-410a.1",
           "FN-IB-410a.2",
           "FN-IB-410a.3"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "이 이슈는 투자 및 대출 활동에 ESG 리스크와 기회를 통합하는 것이 핵심이며, 인권 관련 이슈를 직접적으로 언급하지 않기 때문이다."
+        ]
       },
       {
         "이슈명": "기업 윤리",
@@ -271,10 +226,7 @@
         "관련_지표": [
           "FN-IB-510a.1",
           "FN-IB-510a.2"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "기업 윤리 이슈는 노동권, 차별, 산업안전보건 등 직접적인 인권 침해와 관련이 적고, 기후/환경 문제와도 관련이 없습니다."
+        ]
       },
       {
         "이슈명": "전문가적 진실성",
@@ -290,10 +242,7 @@
           "FN-IB-510b.2",
           "FN-IB-510b.3",
           "FN-IB-510b.4"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "전문가적 진실성은 고객 신뢰 확보와 윤리 강령 준수에 초점을 맞추며, 인권과는 직접적인 관련이 적습니다."
+        ]
       },
       {
         "이슈명": "시스템 위험 관리",
@@ -305,10 +254,7 @@
         "관련_지표": [
           "FN-IB-550a.1",
           "FN-IB-550a.2"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "시스템 위험 관리는 인권 침해와 직접적인 관련이 없으며, ISSB/KSSB 권고 사항에 해당하지 않습니다."
+        ]
       },
       {
         "이슈명": "종업원 인센티브 및 위험 감수",
@@ -322,10 +268,7 @@
           "FN-IB-550b.1",
           "FN-IB-550b.2",
           "FN-IB-550b.3"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "종업원 인센티브 및 위험 감수 이슈는 인권이나 기후/환경과는 직접적인 관련이 없습니다."
+        ]
       }
     ]
   },
@@ -342,10 +285,7 @@
         "관련_지표": [
           "TC-SC-110a.1",
           "TC-SC-110a.2"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "온실가스 배출량 감축은 기후/환경 관련 이슈이며, 인권과는 직접적인 관련이 적습니다."
+        ]
       },
       {
         "이슈명": "제조 부문 에너지 관리",
@@ -357,10 +297,7 @@
         ],
         "관련_지표": [
           "TC-SC-130a.1"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "제조 부문 에너지 관리는 에너지 효율 및 재생에너지 사용과 관련된 환경 문제로, 인권과는 직접적인 관련이 없습니다."
+        ]
       },
       {
         "이슈명": "물 관리",
@@ -371,10 +308,7 @@
         ],
         "관련_지표": [
           "TC-SC-140a.1"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "물 관리는 인권 관련 이슈보다는 환경 문제에 더 직접적으로 관련되어 있습니다."
+        ]
       },
       {
         "이슈명": "폐기물 관리",
@@ -385,10 +319,7 @@
         ],
         "관련_지표": [
           "TC-SC-150a.1"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "폐기물 관리는 인권 관련 이슈보다는 기후/환경 관련 이슈에 더 가깝습니다."
+        ]
       },
       {
         "이슈명": "종업원 보건 및 안전",
@@ -400,10 +331,7 @@
         "관련_지표": [
           "TC-SC-320a.1",
           "TC-SC-320a.2"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "종업원의 건강과 안전은 노동권에 포함되는 인권 관련 이슈입니다."
+        ]
       },
       {
         "이슈명": "글로벌 고급 인력 채용 및 관리",
@@ -414,10 +342,7 @@
         ],
         "관련_지표": [
           "TC-SC-330a.1"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "외국인 인력 채용 및 관리 과정에서 노동권(차별, 노동 시간 등) 침해 가능성이 존재하므로 인권 관련 이슈로 판단합니다."
+        ]
       },
       {
         "이슈명": "제품 수명주기 관리",
@@ -429,10 +354,7 @@
         "관련_지표": [
           "TC-SC-410a.1",
           "TC-SC-410a.2"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "제품 수명주기 관리는 인권 관련 이슈보다는 환경 문제에 더 관련이 깊습니다."
+        ]
       },
       {
         "이슈명": "자재 조달",
@@ -442,10 +364,7 @@
         ],
         "관련_지표": [
           "TC-SC-440a.1"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "중요 자재 공급망에서 아동 노동, 강제 노동 등 인권 침해 위험이 발생할 수 있으며, 자재 채굴 과정에서 환경 오염 및 생태계 파괴가 발생할 수 있다."
+        ]
       },
       {
         "이슈명": "지식재산권 보호 및 경쟁적 행위",
@@ -455,10 +374,7 @@
         ],
         "관련_지표": [
           "TC-SC-520a.1"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "지식재산권 보호 및 경쟁적 행위는 인권 관련 이슈와 직접적인 관련이 없으며, 기후/환경 관련 이슈도 아닙니다."
+        ]
       }
     ]
   },
@@ -477,10 +393,7 @@
           "TC-SI-130a.1",
           "TC-SI-130a.2",
           "TC-SI-130a.3"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "데이터 센터의 환경 발자국 관련 이슈는 인권과는 직접적인 관련이 없지만, 기후/환경 관련 이슈에 해당합니다."
+        ]
       },
       {
         "이슈명": "데이터 프라이버시 및 표현의 자유",
@@ -497,10 +410,7 @@
           "TC-SI-220a.3",
           "TC-SI-220a.4",
           "TC-SI-220a.5"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "데이터 프라이버시 침해는 개인의 정보 자기결정권을 침해하는 인권 관련 이슈로 볼 수 있다."
+        ]
       },
       {
         "이슈명": "데이터 보안",
@@ -512,10 +422,7 @@
         "관련_지표": [
           "TC-SI-230a.1",
           "TC-SI-230a.2"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "데이터 유출은 개인정보보호와 관련되어 인권 침해로 이어질 수 있으므로 인권 관련 이슈로 분류됩니다."
+        ]
       },
       {
         "이슈명": "다양한 글로벌 고급 인력 채용 및 관리",
@@ -529,10 +436,7 @@
           "TC-SI-330a.1",
           "TC-SI-330a.2",
           "TC-SI-330a.3"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "다양한 인력 채용 및 관리는 차별 금지, 노동권, 개인정보보호 등 인권과 관련된 측면을 포함한다."
+        ]
       },
       {
         "이슈명": "지식재산권 보호 및 경쟁적 행위",
@@ -542,10 +446,7 @@
         ],
         "관련_지표": [
           "TC-SI-520a.1"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "지식재산권 보호 및 경쟁적 행위는 인권 관련 이슈와 직접적인 관련이 없으며, 기후/환경 이슈와도 무관하다."
+        ]
       },
       {
         "이슈명": "기술적 중단으로 인한 시스템상 위험 관리",
@@ -557,10 +458,7 @@
         "관련_지표": [
           "TC-SI-550a.1",
           "TC-SI-550a.2"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "기술적 중단으로 인한 시스템 위험 관리는 인권 관련 이슈와 직접적인 관련이 없습니다."
+        ]
       }
     ]
   },
@@ -575,10 +473,7 @@
         ],
         "관련_지표": [
           "TC-TL-130a.1"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "데이터 센터 에너지 효율 및 재생에너지 사용은 인권과 직접적인 관련이 없지만, 기후/환경 이슈에 해당합니다."
+        ]
       },
       {
         "이슈명": "데이터 프라이버시",
@@ -594,10 +489,7 @@
           "TC-TL-220a.2",
           "TC-TL-220a.3",
           "TC-TL-220a.4"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "데이터 프라이버시는 개인정보보호와 관련되어 인권 이슈에 해당하지만, 기후/환경 관련 이슈는 아니다."
+        ]
       },
       {
         "이슈명": "데이터 보안",
@@ -609,10 +501,7 @@
         "관련_지표": [
           "TC-TL-230a.1",
           "TC-TL-230a.2"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "데이터 유출은 개인정보보호 침해로 이어질 수 있으며, 이는 인권 침해와 관련될 수 있습니다."
+        ]
       },
       {
         "이슈명": "수명만료 제품 관리",
@@ -623,10 +512,7 @@
         ],
         "관련_지표": [
           "TC-TL-440a.1"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "수명만료 제품 관리는 인권 이슈와 직접적인 관련이 없지만, 폐기물 관리 및 자원 순환과 관련된 환경 문제이므로 ISSB/KSSB 권고 이슈에 해당합니다."
+        ]
       },
       {
         "이슈명": "경쟁적 행위 및 개방형 인터넷",
@@ -640,10 +526,7 @@
           "TC-TL-520a.1",
           "TC-TL-520a.2",
           "TC-TL-520a.3"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "경쟁적 행위 및 개방형 인터넷 이슈는 노동권, 차별, 산업안전보건 등 인권 관련 이슈와 직접적인 관련이 없으며, 기후/환경 관련 이슈도 아닙니다."
+        ]
       },
       {
         "이슈명": "기술적 중단으로 인한 시스템 위험 관리",
@@ -655,10 +538,7 @@
         "관련_지표": [
           "TC-TL-550a.1",
           "TC-TL-550a.2"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "기술적 중단은 인권 침해와 직접적인 관련이 없으며, ISSB/KSSB 권고 사항에 해당하지 않습니다."
+        ]
       }
     ]
   },
@@ -673,10 +553,7 @@
         ],
         "관련_지표": [
           "TC-HW-230a.1"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "제품 보안은 개인정보보호와 관련되어 있어 인권 이슈에 해당합니다."
+        ]
       },
       {
         "이슈명": "종업원 다양성 및 포용성",
@@ -686,10 +563,7 @@
         ],
         "관련_지표": [
           "TC-HW-330a.1"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "종업원 다양성 및 포용성은 차별 금지라는 인권의 범주에 포함됩니다."
+        ]
       },
       {
         "이슈명": "제품 수명주기 관리",
@@ -705,10 +579,7 @@
           "TC-HW-410a.2",
           "TC-HW-410a.3",
           "TC-HW-410a.4"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "제품 수명주기 관리는 인권 관련 이슈보다는 환경 문제에 더 직접적으로 관련되어 있습니다."
+        ]
       },
       {
         "이슈명": "공급망 관리",
@@ -720,10 +591,7 @@
         "관련_지표": [
           "TC-HW-430a.1",
           "TC-HW-430a.2"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "공급망 관리는 노동 인권 기준 준수를 포함하므로 인권 관련 이슈입니다."
+        ]
       },
       {
         "이슈명": "자재 조달",
@@ -733,10 +601,7 @@
         ],
         "관련_지표": [
           "TC-HW-440a.1"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "자재 조달은 공급망 리스크 관리에 초점을 맞추며, 인권 관련 요소는 직접적으로 언급되지 않습니다."
+        ]
       }
     ]
   },
@@ -755,10 +620,7 @@
           "SV-AD-220a.1",
           "SV-AD-220a.2",
           "SV-AD-220a.3"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "데이터 프라이버시 침해는 개인정보보호와 관련되므로 인권 관련 이슈에 해당합니다."
+        ]
       },
       {
         "이슈명": "광고 무결성",
@@ -772,10 +634,7 @@
           "SV-AD-270a.1",
           "SV-AD-270a.2",
           "SV-AD-270a.3"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "광고 무결성은 인권 침해와 직접적인 관련이 없으며, 인권 이슈의 예시에 해당하지 않습니다."
+        ]
       },
       {
         "이슈명": "전 종업원(workforce) 다양성 및 포용성",
@@ -785,10 +644,7 @@
         ],
         "관련_지표": [
           "SV-AD-330a.1"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "전 종업원 다양성 및 포용성 확보는 차별 금지 및 평등한 기회 제공과 관련된 인권 문제이기 때문입니다."
+        ]
       }
     ]
   },
@@ -805,10 +661,7 @@
         ],
         "관련_지표": [
           "SV-LF-130a.1"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "에너지 관리는 인권 관련 이슈와 직접적인 연관성이 없으며, 기후/환경 관련 이슈에 해당합니다."
+        ]
       },
       {
         "이슈명": "고객 안전",
@@ -820,10 +673,7 @@
         "관련_지표": [
           "SV-LF-250a.1",
           "SV-LF-250a.2"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "고객 안전은 사고 발생 시 생명과 신체에 대한 위해를 가할 수 있으므로, 인권 중 '생명권'과 연관될 수 있습니다."
+        ]
       },
       {
         "이슈명": "전 종업원(workforce) 안전",
@@ -834,10 +684,7 @@
         ],
         "관련_지표": [
           "SV-LF-320a.1"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "산업 재해 예방과 안전한 근로 환경 조성이 노동자의 인권, 특히 안전하고 건강한 근로 환경을 보장하는 노동권과 관련 있기 때문입니다."
+        ]
       }
     ]
   },
@@ -854,10 +701,7 @@
         "관련_지표": [
           "SV-ME-260a.1",
           "SV-ME-260a.2"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "콘텐츠 제작 인력의 성별·인종적 다양성 확보는 차별 금지와 관련된 인권 이슈이며, 기후/환경 관련성은 낮습니다."
+        ]
       },
       {
         "이슈명": "저널리스트의 무결성 및 스폰서십 식별",
@@ -870,10 +714,7 @@
           "SV-ME-270a.1",
           "SV-ME-270a.2",
           "SV-ME-270a.3"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "저널리스트의 무결성 및 스폰서십 식별 이슈는 인권 문제와 직접적인 관련이 없습니다."
+        ]
       },
       {
         "이슈명": "지적재산 보호 및 미디어 저작권 침해",
@@ -883,10 +724,7 @@
         ],
         "관련_지표": [
           "SV-ME-520a.1"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "지적재산 보호 및 미디어 저작권 침해는 인권과는 직접적인 관련이 없으며, 기후/환경 이슈와도 관련이 없습니다."
+        ]
       }
     ]
   },
@@ -905,10 +743,7 @@
           "CG-AM-250a.1",
           "CG-AM-250a.2",
           "CG-AM-250a.3"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "제품 안전은 소비자의 안전과 관련된 문제이며, 직접적으로 인권 침해와 관련이 있다고 보기 어렵습니다."
+        ]
       },
       {
         "이슈명": "제품 수명주기(Lifecycle)의 환경적 영향",
@@ -922,10 +757,7 @@
           "CG-AM-410a.1",
           "CG-AM-410a.2",
           "CG-AM-410a.3"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "제품 수명주기 환경 영향은 인권 관련 이슈와 직접적인 관련이 없지만, 기후/환경 관련 이슈에 해당한다."
+        ]
       }
     ]
   },
@@ -943,10 +775,7 @@
         "관련_지표": [
           "CG-HP-140a.1",
           "CG-HP-140a.2"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "물 관리는 인권 직접적인 연관성이 낮지만 환경 문제와 밀접하게 관련되어 있습니다."
+        ]
       },
       {
         "이슈명": "제품 환경·보건·안전 성과",
@@ -961,10 +790,7 @@
           "CG-HP-250a.2",
           "CG-HP-250a.3",
           "CG-HP-250a.4"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "제품 환경·보건·안전 성과는 인권 관련 이슈보다는 환경 관련 이슈에 가깝습니다."
+        ]
       },
       {
         "이슈명": "포장재 수명주기 관리",
@@ -977,10 +803,7 @@
         "관련_지표": [
           "CG-HP-410a.1",
           "CG-HP-410a.2"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "포장재 수명주기 관리는 인권 관련 이슈가 아니며, 환경에 미치는 영향을 최소화하는 것은 기후/환경 관련 이슈에 해당합니다."
+        ]
       },
       {
         "이슈명": "팜유 공급망의 환경적·사회적 영향",
@@ -991,10 +814,7 @@
         ],
         "관련_지표": [
           "CG-HP-430a.1"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "팜유 생산 과정에서 노동 착취, 토지 분쟁, 지역사회 권리 침해 등이 발생할 수 있으므로 인권 관련 이슈이며, 삼림 파괴 및 환경 오염과도 관련되어 있어 기후/환경 관련 이슈이기도 하다."
+        ]
       }
     ]
   },
@@ -1011,10 +831,7 @@
         ],
         "관련_지표": [
           "CG-MR-130a.1"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "에너지 관리는 인권과는 직접적인 관련이 없고, 기후 변화 및 환경 문제와 관련이 깊습니다."
+        ]
       },
       {
         "이슈명": "데이터 보안",
@@ -1027,10 +844,7 @@
         "관련_지표": [
           "CG-MR-230a.1",
           "CG-MR-230a.2"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "데이터 보안은 개인정보 보호와 관련되어 인권 관련 이슈에 해당합니다."
+        ]
       },
       {
         "이슈명": "노동 관행",
@@ -1044,10 +858,7 @@
           "CG-MR-310a.1",
           "CG-MR-310a.2",
           "CG-MR-310a.3"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "임금 수준, 노동법 준수, 노사 관계 관리는 노동권과 관련된 인권 문제에 해당합니다."
+        ]
       },
       {
         "이슈명": "전 종업원(workforce) 다양성 및 포용성",
@@ -1059,10 +870,7 @@
         "관련_지표": [
           "CG-MR-330a.1",
           "CG-MR-330a.2"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "전 종업원 다양성 및 포용성 이슈는 차별 금지라는 인권 관련 주제를 포함하기 때문이다."
+        ]
       },
       {
         "이슈명": "제품 조달, 포장재 및 마케팅",
@@ -1076,10 +884,7 @@
           "CG-MR-410a.1",
           "CG-MR-410a.2",
           "CG-MR-410a.3"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "제품 조달, 포장재, 마케팅 이슈는 인권 관련 요소보다는 환경적 측면에 더 직접적으로 연관되어 있습니다."
+        ]
       }
     ]
   },
@@ -1096,10 +901,7 @@
         ],
         "관련_지표": [
           "FB-PF-130a.1"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "에너지 관리는 인권 관련 이슈와 직접적인 관련이 없지만, 기후변화 및 환경에 큰 영향을 미치므로 기후/환경 관련 이슈로 분류될 수 있습니다."
+        ]
       },
       {
         "이슈명": "물 관리",
@@ -1113,10 +915,7 @@
           "FB-PF-140a.1",
           "FB-PF-140a.2",
           "FB-PF-140a.3"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "물 관리 이슈는 인권 문제와 직접적인 관련성은 적지만, 환경 문제와 관련이 깊어 ISSB/KSSB에서 권고하는 사항입니다."
+        ]
       },
       {
         "이슈명": "식품 안전",
@@ -1132,10 +931,7 @@
           "FB-PF-250a.2",
           "FB-PF-250a.3",
           "FB-PF-250a.4"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "식품 안전은 인권과 직접적인 관련성이 적습니다."
+        ]
       },
       {
         "이슈명": "건강 및 영양",
@@ -1147,10 +943,7 @@
         "관련_지표": [
           "FB-PF-260a.1",
           "FB-PF-260a.2"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "건강 및 영양 이슈는 인권 관련 이슈(노동권, 차별, 안전, 개인정보 등)와 직접적인 관련이 적습니다."
+        ]
       },
       {
         "이슈명": "제품 라벨링 및 마케팅",
@@ -1165,10 +958,7 @@
           "FB-PF-270a.2",
           "FB-PF-270a.3",
           "FB-PF-270a.4"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "제품 라벨링 및 마케팅 이슈는 직접적인 인권 침해와 관련이 없습니다."
+        ]
       },
       {
         "이슈명": "포장재 수명주기 관리",
@@ -1182,10 +972,7 @@
         "관련_지표": [
           "FB-PF-410a.1",
           "FB-PF-410a.2"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "포장재 수명주기 관리는 환경 영향을 줄이는 데 초점을 맞추므로 기후/환경 관련 이슈에 해당합니다."
+        ]
       },
       {
         "이슈명": "원료 공급망의 환경적·사회적 영향",
@@ -1197,10 +984,7 @@
         "관련_지표": [
           "FB-PF-430a.1",
           "FB-PF-430a.2"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "원료 공급망 관리에는 노동권(아동노동, 강제노동 등) 및 지역사회 권리 등 인권 관련 이슈가 포함될 수 있으며, 환경적 영향 관리 역시 중요하므로 두 가지 모두 해당 이슈에 포함될 수 있습니다."
+        ]
       },
       {
         "이슈명": "원료 조달",
@@ -1212,10 +996,7 @@
         "관련_지표": [
           "FB-PF-440a.1",
           "FB-PF-440a.2"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "원료 조달 이슈는 주로 기후변화 및 물 부족에 따른 공급망 위험 관리와 관련된 환경적 측면을 다루므로, 기후/환경 관련 이슈로 분류할 수 있습니다."
+        ]
       }
     ]
   },
@@ -1232,10 +1013,7 @@
         "관련_지표": [
           "FB-TB-260a.1",
           "FB-TB-260a.2"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "공중 보건 이슈는 인권 관련 이슈보다는 건강과 관련된 위험 및 기회를 평가하는 내용에 집중되어 있습니다."
+        ]
       },
       {
         "이슈명": "마케팅 활동",
@@ -1247,10 +1025,7 @@
         "관련_지표": [
           "FB-TB-270a.1",
           "FB-TB-270a.2"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "청소년 흡연 예방을 위한 광고 규제는 인권, 기후/환경과 직접적인 관련이 적습니다."
+        ]
       }
     ]
   },
@@ -1269,10 +1044,7 @@
           "TR-RO-110a.1",
           "TR-RO-110a.2",
           "TR-RO-110a.3"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "온실가스 배출량 감축은 기후/환경 문제와 관련이 있지만, 직접적인 인권 침해와는 관련이 없다."
+        ]
       },
       {
         "이슈명": "대기질",
@@ -1282,10 +1054,7 @@
         ],
         "관련_지표": [
           "TR-RO-120a.1"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "대기질 이슈는 인권보다는 환경 오염과 관련된 이슈입니다."
+        ]
       },
       {
         "이슈명": "운전자 근무 조건",
@@ -1299,10 +1068,7 @@
           "TR-RO-320a.1",
           "TR-RO-320a.2",
           "TR-RO-320a.3"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "운전자의 건강과 안전 보호는 노동권, 즉 인권과 관련된 이슈입니다."
+        ]
       },
       {
         "이슈명": "사고 및 안전 관리",
@@ -1316,10 +1082,7 @@
           "TR-RO-540a.1",
           "TR-RO-540a.2",
           "TR-RO-540a.3"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "산업 안전 보건과 관련된 사항이므로 인권 이슈에 해당합니다."
+        ]
       }
     ]
   },
@@ -1336,10 +1099,7 @@
         ],
         "관련_지표": [
           "TR-AP-130a.1"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "에너지 관리는 인권 관련 이슈와 직접적인 관련이 없지만, 기후/환경 관련 이슈에 해당한다."
+        ]
       },
       {
         "이슈명": "폐기물 관리",
@@ -1351,10 +1111,7 @@
         ],
         "관련_지표": [
           "TR-AP-150a.1"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "폐기물 관리는 환경에 미치는 영향을 최소화하는 것이 주된 목표이며, 인권과는 직접적인 관련이 적습니다."
+        ]
       },
       {
         "이슈명": "제품 안전",
@@ -1364,10 +1121,7 @@
         ],
         "관련_지표": [
           "TR-AP-250a.1"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "제품 안전 이슈는 인권 문제와 직접적인 관련이 없으며, 기후/환경 문제와도 관련이 없습니다."
+        ]
       },
       {
         "이슈명": "연료 효율성을 위한 설계",
@@ -1377,10 +1131,7 @@
         ],
         "관련_지표": [
           "TR-AP-410a.1"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "연료 효율성 설계는 인권과는 직접적인 관련이 없습니다."
+        ]
       },
       {
         "이슈명": "자재 조달",
@@ -1390,10 +1141,7 @@
         ],
         "관련_지표": [
           "TR-AP-440a.1"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "중요 자재 채취 과정에서 아동노동, 강제노동 등 인권 침해 가능성이 존재한다."
+        ]
       },
       {
         "이슈명": "자재 효율성",
@@ -1405,10 +1153,7 @@
         "관련_지표": [
           "TR-AP-440b.1",
           "TR-AP-440b.2"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "자재 효율성은 인권 문제와 직접적인 관련이 없지만, 기후/환경 문제와는 밀접하게 연관되어 있습니다."
+        ]
       },
       {
         "이슈명": "경쟁적 행위",
@@ -1418,10 +1163,7 @@
         ],
         "관련_지표": [
           "TR-AP-520a.1"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "경쟁적 행위는 인권 관련 이슈와 직접적인 관련이 없습니다."
+        ]
       }
     ]
   },
@@ -1440,10 +1182,7 @@
           "TR-AU-250a.1",
           "TR-AU-250a.2",
           "TR-AU-250a.3"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "제품 안전은 소비자의 안전과 관련된 문제이며, 인권과는 직접적인 관련이 없습니다."
+        ]
       },
       {
         "이슈명": "노동 관행",
@@ -1455,10 +1194,7 @@
         "관련_지표": [
           "TR-AU-310a.1",
           "TR-AU-310a.2"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "단체교섭권은 노동자의 기본적인 권리이므로 인권 관련 이슈에 해당합니다."
+        ]
       },
       {
         "이슈명": "연료 효율성 및 사용단계 배출량",
@@ -1472,10 +1208,7 @@
           "TR-AU-410a.1",
           "TR-AU-410a.2",
           "TR-AU-410a.3"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "연료 효율성 및 배출량 감소는 인권과는 직접적인 관련이 없지만, 기후/환경 이슈에 해당한다."
+        ]
       },
       {
         "이슈명": "자재 조달",
@@ -1485,10 +1218,7 @@
         ],
         "관련_지표": [
           "TR-AU-440a.1"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "중요 자재 채굴 과정에서 아동노동, 열악한 노동 환경 등 인권 침해 가능성이 존재한다."
+        ]
       },
       {
         "이슈명": "자재 효율성 및 재활용",
@@ -1502,10 +1232,7 @@
           "TR-AU-440b.1",
           "TR-AU-440b.2",
           "TR-AU-440b.3"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "자재 효율성 및 재활용은 인권 문제와 직접적인 관련이 없지만, 기후/환경 문제와 밀접하게 연관되어 있습니다."
+        ]
       }
     ]
   },
@@ -1525,10 +1252,7 @@
           "TR-AF-110a.1",
           "TR-AF-110a.2",
           "TR-AF-110a.3"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "온실가스 배출량 감축은 인권과는 직접적인 관련이 없지만, 기후/환경 이슈에 해당합니다."
+        ]
       },
       {
         "이슈명": "대기질",
@@ -1538,10 +1262,7 @@
         ],
         "관련_지표": [
           "TR-AF-120a.1"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "대기질 오염은 인체 건강에 영향을 미치지만, 직접적인 인권 침해와 관련은 적습니다."
+        ]
       },
       {
         "이슈명": "노동 관행",
@@ -1553,10 +1274,7 @@
         "관련_지표": [
           "TR-AF-310a.1",
           "TR-AF-310a.2"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "노동 관행 이슈는 노동법 준수, 노사 분쟁 방지 등과 관련되어 노동권과 직접적으로 연관되기 때문에 인권 관련 이슈로 판단합니다."
+        ]
       },
       {
         "이슈명": "종업원(employee) 보건 및 안전",
@@ -1567,10 +1285,7 @@
         ],
         "관련_지표": [
           "TR-AF-320a.1"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "종업원의 보건 및 안전은 노동권의 중요한 부분이며, 이는 인권과 직접적으로 관련되어 있습니다."
+        ]
       },
       {
         "이슈명": "공급망 관리",
@@ -1582,10 +1297,7 @@
         "관련_지표": [
           "TR-AF-430a.1",
           "TR-AF-430a.2"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "공급망 관리에는 하도급 계약자의 안전 기준 준수 여부 모니터링이 포함되어 있어 산업안전보건과 같은 인권 관련 이슈가 포함될 수 있으며, 탄소 발자국 관리는 기후/환경 관련 이슈에 해당하기 때문입니다."
+        ]
       },
       {
         "이슈명": "사고 및 안전 관리",
@@ -1600,10 +1312,7 @@
           "TR-AF-540a.2",
           "TR-AF-540a.3",
           "TR-AF-540a.4"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "사고 및 안전 관리는 산업안전보건과 관련되어 근로자의 인권 보호에 영향을 미칠 수 있습니다."
+        ]
       }
     ]
   },
@@ -1622,10 +1331,7 @@
           "TR-AL-110a.1",
           "TR-AL-110a.2",
           "TR-AL-110a.3"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "온실가스 배출량 관리 이슈는 인권과는 직접적인 관련이 없지만 기후/환경 이슈에 해당하기 때문입니다."
+        ]
       },
       {
         "이슈명": "노동 관행",
@@ -1637,10 +1343,7 @@
         "관련_지표": [
           "TR-AL-310a.1",
           "TR-AL-310a.2"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "노동조합 가입률, 노사 관계, 파업, 평판 등은 노동권과 관련되어 있어 인권 관련 이슈로 분류됩니다."
+        ]
       },
       {
         "이슈명": "경쟁적 행위",
@@ -1650,10 +1353,7 @@
         ],
         "관련_지표": [
           "TR-AL-520a.1"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "경쟁적 행위는 인권 관련 이슈와 직접적인 관련이 없으며, 기후/환경 관련 이슈도 아닙니다."
+        ]
       },
       {
         "이슈명": "사고 및 안전관리",
@@ -1667,10 +1367,7 @@
           "TR-AL-540a.1",
           "TR-AL-540a.2",
           "TR-AL-540a.3"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "사고 및 안전관리 이슈는 산업안전보건과 관련되어 인권 이슈에 해당합니다."
+        ]
       }
     ]
   },
@@ -1691,10 +1388,7 @@
           "TR-MT-110a.2",
           "TR-MT-110a.3",
           "TR-MT-110a.4"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "선박 운항의 탄소 배출 감소는 인권과 직접적인 관련이 없지만 기후/환경 이슈에 해당합니다."
+        ]
       },
       {
         "이슈명": "대기질",
@@ -1704,10 +1398,7 @@
         ],
         "관련_지표": [
           "TR-MT-120a.1"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "대기질 오염은 인권 침해와 직접적인 관련이 적으며, 환경 오염 문제에 해당하기 때문입니다."
+        ]
       },
       {
         "이슈명": "생태학적 영향",
@@ -1721,10 +1412,7 @@
           "TR-MT-160a.1",
           "TR-MT-160a.2",
           "TR-MT-160a.3"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "선박평형수 배출, 해양 보호구역 운항, 유해물질 유출 등은 인권과는 직접적인 관련이 없지만, 환경 이슈와는 직접적인 관련이 있다."
+        ]
       },
       {
         "이슈명": "종업원(employee) 보건 및 안전",
@@ -1734,10 +1422,7 @@
         ],
         "관련_지표": [
           "TR-MT-320a.1"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "종업원의 안전과 건강은 노동권에 포함되는 인권 관련 이슈입니다."
+        ]
       },
       {
         "이슈명": "기업 윤리",
@@ -1749,10 +1434,7 @@
         "관련_지표": [
           "TR-MT-510a.1",
           "TR-MT-510a.2"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "기업 윤리 이슈는 뇌물 수수, 급행료 지급 등 비윤리적 관행에 대한 문제로 인권과는 직접적인 관련이 적습니다. 기후/환경 관련 이슈도 아닙니다."
+        ]
       },
       {
         "이슈명": "사고 및 안전관리",
@@ -1766,10 +1448,7 @@
           "TR-MT-540a.1",
           "TR-MT-540a.2",
           "TR-MT-540a.3"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "사고 및 안전관리는 인권 관련 이슈(노동권, 차별 등)와 직접적인 관련이 적고, 기후/환경 관련 이슈도 아닙니다."
+        ]
       }
     ]
   },
@@ -1790,10 +1469,7 @@
           "IF-GU-240a.2",
           "IF-GU-240a.3",
           "IF-GU-240a.4"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "에너지 가격적정성 이슈는 인권 관련 이슈와 직접적인 연관성이 낮습니다."
+        ]
       },
       {
         "이슈명": "최종 사용 효율",
@@ -1805,10 +1481,7 @@
         "관련_지표": [
           "IF-GU-420a.1",
           "IF-GU-420a.2"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "최종 사용 효율 이슈는 에너지 절약을 통해 온실가스 배출 감축에 기여하므로 기후/환경 관련 이슈이며, 인권과는 직접적인 관련이 없습니다."
+        ]
       },
       {
         "이슈명": "가스 공급 인프라의 무결성",
@@ -1824,10 +1497,7 @@
           "IF-GU-540a.2",
           "IF-GU-540a.3",
           "IF-GU-540a.4"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "가스 공급 인프라 무결성 이슈는 산업 안전 및 지역사회 안전과 관련되어 인권 침해와 직접적인 연관성은 낮지만, ISSB 기준에서는 안전 관련 이슈를 폭넓게 다루므로 권고될 수 있습니다."
+        ]
       }
     ]
   },
@@ -1844,10 +1514,7 @@
         "관련_지표": [
           "IF-EN-160a.1",
           "IF-EN-160a.2"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "프로젝트 개발의 환경적 영향은 생태계 파괴, 오염 등 환경 위험을 다루므로 기후/환경 관련 이슈에 해당합니다."
+        ]
       },
       {
         "이슈명": "구조적 무결성 및 안전성",
@@ -1859,10 +1526,7 @@
         "관련_지표": [
           "IF-EN-250a.1",
           "IF-EN-250a.2"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "구조적 무결성 및 안전성은 인권 이슈, 기후/환경 이슈와 직접적인 관련이 적습니다."
+        ]
       },
       {
         "이슈명": "전 종업원(workforce) 보건 및 안전",
@@ -1872,10 +1536,7 @@
         ],
         "관련_지표": [
           "IF-EN-320a.1"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "근로자의 안전과 생명 보호는 산업안전보건과 관련된 인권 이슈이기 때문입니다."
+        ]
       },
       {
         "이슈명": "건물 및 인프라 전과정(lifecycle)에 걸친 영향",
@@ -1887,10 +1548,7 @@
         "관련_지표": [
           "IF-EN-410a.1",
           "IF-EN-410a.2"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "건물 및 인프라의 환경 부하 감소는 인권과는 직접적인 관련이 없지만, 기후/환경 관련 이슈에 해당한다."
+        ]
       },
       {
         "이슈명": "비즈니스 믹스(Business Mix)가 기후에 미치는 영향",
@@ -1904,10 +1562,7 @@
           "IF-EN-410b.1",
           "IF-EN-410b.2",
           "IF-EN-410b.3"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "비즈니스 믹스는 직접적으로 인권과 관련이 없으며, 기후변화 관련 전환 리스크 관리에 해당하므로 기후/환경 관련 이슈에 해당합니다."
+        ]
       },
       {
         "이슈명": "사업 윤리",
@@ -1921,10 +1576,7 @@
           "IF-EN-510a.1",
           "IF-EN-510a.2",
           "IF-EN-510a.3"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "사업 윤리 이슈는 직접적으로 인권 관련 이슈(노동권, 차별 등)와 관련이 적고, 기후/환경 관련 이슈도 아닙니다."
+        ]
       }
     ]
   },
@@ -1945,10 +1597,7 @@
           "IF-EU-110a.2",
           "IF-EU-110a.3",
           "IF-EU-110a.4"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "온실가스 배출 및 에너지 자원 계획은 인권과는 직접적인 관련이 없지만, 기후/환경 관련 이슈에 해당한다."
+        ]
       },
       {
         "이슈명": "대기질",
@@ -1959,10 +1608,7 @@
         ],
         "관련_지표": [
           "IF-EU-120a.1"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "대기 오염은 인근 지역사회의 건강에 직접적인 영향을 미치므로 지역사회 권리 및 건강권과 관련된 인권 이슈이며, 기후/환경 관련 이슈도 포함한다."
+        ]
       },
       {
         "이슈명": "물 관리",
@@ -1976,10 +1622,7 @@
           "IF-EU-140a.1",
           "IF-EU-140a.2",
           "IF-EU-140a.3"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "물 관리는 직접적인 인권 침해와 관련이 적으며, 환경 보호 및 지속 가능한 자원 관리에 더 관련이 깊습니다."
+        ]
       },
       {
         "이슈명": "석탄재 관리",
@@ -1991,10 +1634,7 @@
         "관련_지표": [
           "IF-EU-150a.1",
           "IF-EU-150a.2"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "석탄재 관리는 인권 관련 이슈보다는 환경 오염 방지에 더 집중되어 있다."
+        ]
       },
       {
         "이슈명": "에너지 가격적정성",
@@ -2010,10 +1650,7 @@
           "IF-EU-240a.2",
           "IF-EU-240a.3",
           "IF-EU-240a.4"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "전기요금 미납으로 인한 단전은 취약계층의 기본적인 생활권을 침해할 수 있으므로 인권 관련 이슈로 판단합니다."
+        ]
       },
       {
         "이슈명": "전 종업원(workforce) 보건 및 안전",
@@ -2023,10 +1660,7 @@
         ],
         "관련_지표": [
           "IF-EU-320a.1"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "종업원 안전은 노동자의 권리 보호와 관련된 이슈이므로 인권 관련 이슈에 해당합니다."
+        ]
       },
       {
         "이슈명": "최종 사용 효율 및 수요",
@@ -2040,10 +1674,7 @@
           "IF-EU-420a.1",
           "IF-EU-420a.2",
           "IF-EU-420a.3"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "스마트 그리드 및 수요 관리는 인권과 직접적인 관련이 없지만, 기후/환경 이슈 해결에 기여하므로 ISSB/KSSB 권고 이슈에 해당합니다."
+        ]
       },
       {
         "이슈명": "원자력 안전 및 비상 관리",
@@ -2055,10 +1686,7 @@
         "관련_지표": [
           "IF-EU-540a.1",
           "IF-EU-540a.2"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "원자력 안전 및 비상 관리는 노동권, 차별, 산업안전보건, 개인정보보호, 지역사회 권리 등 인권 관련 이슈와 직접적인 관련이 적습니다."
+        ]
       },
       {
         "이슈명": "그리드 복원력",
@@ -2070,10 +1698,7 @@
         "관련_지표": [
           "IF-EU-550a.1",
           "IF-EU-550a.2"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "그리드 복원력은 인권 관련 이슈보다는 기후/환경 관련 이슈에 더 가깝습니다."
+        ]
       }
     ]
   },
@@ -2094,10 +1719,7 @@
           "IF-HB-160a.2",
           "IF-HB-160a.3",
           "IF-HB-160a.4"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "토지 이용 및 생태학적 영향은 환경 문제에 해당하지만, 인권과는 직접적인 관련이 적습니다."
+        ]
       },
       {
         "이슈명": "전 종업원(workforce) 보건 및 안전",
@@ -2107,10 +1729,7 @@
         ],
         "관련_지표": [
           "IF-HB-320a.1"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "전 종업원 보건 및 안전은 산업안전보건 관련 이슈로, 노동자의 안전과 건강을 보호하는 인권과 관련되어 있다."
+        ]
       },
       {
         "이슈명": "자원 효율성을 위한 설계",
@@ -2126,10 +1745,7 @@
           "IF-HB-410a.2",
           "IF-HB-410a.3",
           "IF-HB-410a.4"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "자원 효율성을 위한 설계는 인권 이슈와 직접적인 관련이 없지만, 기후/환경 관련 이슈에 해당하며 ISSB/KSSB 권고 사항에 부합하는 측면이 있다."
+        ]
       },
       {
         "이슈명": "신규 개발의 지역사회 영향",
@@ -2143,10 +1759,7 @@
           "IF-HB-410b.1",
           "IF-HB-410b.2",
           "IF-HB-410b.3"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "지역사회에 긍정적 영향을 주는 개발은 지역사회 권리 및 거주자의 삶의 질과 관련되므로 인권 관련 이슈로 볼 수 있습니다."
+        ]
       },
       {
         "이슈명": "기후변화 적응",
@@ -2158,10 +1771,7 @@
         "관련_지표": [
           "IF-HB-420a.1",
           "IF-HB-420a.2"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "기후변화 적응 이슈는 인권보다는 기후/환경 위험에 직접적으로 관련되어 있습니다."
+        ]
       }
     ]
   },
@@ -2178,10 +1788,7 @@
         ],
         "관련_지표": [
           "RT-IG-130a.1"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "에너지 관리 이슈는 인권 관련 직접적인 내용이 없으며, 기후변화 및 환경에 큰 영향을 미치므로 기후/환경 관련 이슈로 분류됩니다."
+        ]
       },
       {
         "이슈명": "종업원(employee) 보건 및 안전",
@@ -2193,10 +1800,7 @@
         ],
         "관련_지표": [
           "RT-IG-320a.1"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "종업원 안전은 노동자의 권리 보호와 관련되므로 인권 이슈에 해당합니다."
+        ]
       },
       {
         "이슈명": "연비 및 사용단계 배출량",
@@ -2212,10 +1816,7 @@
           "RT-IG-410a.2",
           "RT-IG-410a.3",
           "RT-IG-410a.4"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "연비 및 배출량 감소는 기후/환경 관련 이슈이며, 인권과는 직접적인 관련이 적습니다."
+        ]
       },
       {
         "이슈명": "자재 조달",
@@ -2225,10 +1826,7 @@
         ],
         "관련_지표": [
           "RT-IG-440a.1"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "중요 자재 조달 과정에서 인권 침해(강제 노동, 열악한 노동 환경 등)가 발생할 수 있기 때문입니다."
+        ]
       },
       {
         "이슈명": "재제조 설계 및 서비스",
@@ -2238,10 +1836,7 @@
         ],
         "관련_지표": [
           "RT-IG-440b.1"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "재제조 설계 및 서비스는 인권 관련 이슈와 직접적인 관련성이 적습니다."
+        ]
       }
     ]
   },
@@ -2259,10 +1854,7 @@
         "관련_지표": [
           "RT-CP-110a.1",
           "RT-CP-110a.2"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "온실가스 배출량 감축은 직접적으로 인권 문제와 관련이 없지만, 기후/환경 관련 이슈에 해당합니다."
+        ]
       },
       {
         "이슈명": "대기질",
@@ -2272,10 +1864,7 @@
         ],
         "관련_지표": [
           "RT-CP-120a.1"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "대기질 관리는 직접적인 인권 관련 이슈보다는 환경 오염 및 기후 변화와 관련된 이슈입니다."
+        ]
       },
       {
         "이슈명": "에너지 관리",
@@ -2287,10 +1876,7 @@
         ],
         "관련_지표": [
           "RT-CP-130a.1"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "에너지 관리는 인권 관련 이슈보다는 기후/환경 관련 이슈에 더 직접적으로 관련되어 있습니다."
+        ]
       },
       {
         "이슈명": "물 관리",
@@ -2304,10 +1890,7 @@
           "RT-CP-140a.1",
           "RT-CP-140a.2",
           "RT-CP-140a.3"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "물 관리는 인권 관련 이슈보다는 환경 문제에 더 직접적으로 관련되어 있습니다."
+        ]
       },
       {
         "이슈명": "폐기물 관리",
@@ -2318,10 +1901,7 @@
         ],
         "관련_지표": [
           "RT-CP-150a.1"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "폐기물 관리는 인권 관련 이슈보다는 환경 문제에 더 직접적으로 관련되어 있습니다."
+        ]
       },
       {
         "이슈명": "제품 안전",
@@ -2333,10 +1913,7 @@
         "관련_지표": [
           "RT-CP-250a.1",
           "RT-CP-250a.2"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "제품 안전은 소비자의 건강에 영향을 미치지만, 인권 침해와 직접적인 관련성은 적습니다."
+        ]
       },
       {
         "이슈명": "제품 수명주기 관리",
@@ -2350,10 +1927,7 @@
           "RT-CP-410a.1",
           "RT-CP-410a.2",
           "RT-CP-410a.3"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "제품 수명주기 관리는 인권 관련 이슈와 직접적인 연관성이 적습니다."
+        ]
       },
       {
         "이슈명": "공급망 관리",
@@ -2365,10 +1939,7 @@
         "관련_지표": [
           "RT-CP-430a.1",
           "RT-CP-430a.2"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "공급망 관리에는 노동권과 지역사회 권리 등 인권 관련 요소가 포함될 수 있습니다. 또한 환경적, 사회적으로 인증된 원자재 조달은 ISSB 및 KSSB 권고에 부합하는 ESG 이슈로 평가될 수 있습니다."
+        ]
       }
     ]
   },
@@ -2384,10 +1955,7 @@
         ],
         "관련_지표": [
           "RT-AE-130a.1"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "에너지 관리는 인권 관련 이슈보다는 기후/환경 관련 이슈에 더 직접적으로 연관됩니다."
+        ]
       },
       {
         "이슈명": "유해 폐기물 관리",
@@ -2399,10 +1967,7 @@
         "관련_지표": [
           "RT-AE-150a.1",
           "RT-AE-150a.2"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "유해 폐기물 관리는 환경 오염을 줄이는 데 초점을 맞추므로 기후/환경 관련 이슈이며, 인권과는 직접적인 관련이 없습니다."
+        ]
       },
       {
         "이슈명": "데이터 보안",
@@ -2414,10 +1979,7 @@
         "관련_지표": [
           "RT-AE-230a.1",
           "RT-AE-230a.2"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "데이터 보안 침해는 개인정보 유출을 야기할 수 있으며, 이는 개인의 프라이버시 침해와 관련된 인권 문제로 이어질 수 있습니다."
+        ]
       },
       {
         "이슈명": "제품 안전",
@@ -2433,10 +1995,7 @@
           "RT-AE-250a.2",
           "RT-AE-250a.3",
           "RT-AE-250a.4"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "제품 안전은 인권 침해와 직접적인 관련이 없으며, 기후/환경 이슈도 아님."
+        ]
       },
       {
         "이슈명": "연비 및 사용단계 배출량",
@@ -2448,10 +2007,7 @@
         "관련_지표": [
           "RT-AE-410a.1",
           "RT-AE-410a.2"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "연비 및 배출량 감소는 인권과 직접적인 관련이 없지만, 기후/환경 이슈에 해당합니다."
+        ]
       },
       {
         "이슈명": "자재 조달",
@@ -2461,10 +2017,7 @@
         ],
         "관련_지표": [
           "RT-AE-440a.1"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "중요 자재 조달 과정에서 인권 침해(아동 노동, 강제 노동 등)가 발생할 수 있다."
+        ]
       },
       {
         "이슈명": "기업 윤리",
@@ -2478,10 +2031,7 @@
           "RT-AE-510a.1",
           "RT-AE-510a.2",
           "RT-AE-510a.3"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "기업 윤리는 부패 방지 및 불법 거래 방지에 초점을 맞추며, 직접적으로 인권 문제나 기후/환경 문제와 관련이 없다."
+        ]
       }
     ]
   },
@@ -2497,10 +2047,7 @@
         ],
         "관련_지표": [
           "RT-EE-130a.1"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "에너지 관리는 인권 관련 이슈와 직접적인 관련이 없지만, 기후/환경 이슈에는 매우 중요한 요소이기 때문입니다."
+        ]
       },
       {
         "이슈명": "유해폐기물 관리",
@@ -2512,10 +2059,7 @@
         "관련_지표": [
           "RT-EE-150a.1",
           "RT-EE-150a.2"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "유해 폐기물 관리는 노동 환경과 관련된 산업 안전 보건 이슈를 포함할 수 있지만, 핵심은 환경 오염 방지 및 자원 재활용에 있기 때문에 인권 이슈로 직접적으로 연결되지는 않습니다."
+        ]
       },
       {
         "이슈명": "제품 안전",
@@ -2527,10 +2071,7 @@
         "관련_지표": [
           "RT-EE-250a.1",
           "RT-EE-250a.2"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "제품 안전은 소비자의 생명과 신체에 대한 안전을 다루지만, 직접적으로 인권 침해와 관련된 이슈는 아니다."
+        ]
       },
       {
         "이슈명": "제품 수명주기 관리",
@@ -2544,10 +2085,7 @@
           "RT-EE-410a.1",
           "RT-EE-410a.2",
           "RT-EE-410a.3"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "제품 수명주기 관리는 제품의 유해 물질 사용 감소, 에너지 효율 개선 등에 초점을 맞추므로 인권과는 직접적인 관련이 없습니다."
+        ]
       },
       {
         "이슈명": "자재 조달",
@@ -2557,10 +2095,7 @@
         ],
         "관련_지표": [
           "RT-EE-440a.1"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "희토류 채굴 과정에서 인권 침해(아동노동, 강제노동 등)가 발생할 수 있다."
+        ]
       },
       {
         "이슈명": "기업 윤리",
@@ -2574,10 +2109,7 @@
           "RT-EE-510a.1",
           "RT-EE-510a.2",
           "RT-EE-510a.3"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "기업 윤리 이슈는 인권 관련 이슈와 직접적인 관련이 없으며, 기후/환경 관련 이슈도 아닙니다."
+        ]
       }
     ]
   },
@@ -2595,10 +2127,7 @@
         "관련_지표": [
           "RT-CH-110a.1",
           "RT-CH-110a.2"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "온실가스 배출량 감축은 기후/환경 관련 이슈이며, 인권과는 직접적인 관련이 없다."
+        ]
       },
       {
         "이슈명": "대기질",
@@ -2608,10 +2137,7 @@
         ],
         "관련_지표": [
           "RT-CH-120a.1"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "대기 오염은 지역 사회의 건강에 영향을 미치므로 지역 사회 권리와 산업 안전 보건과 관련되어 인권 이슈로 간주될 수 있으며, 환경 오염 이슈이므로 기후/환경 관련 이슈에도 해당됩니다."
+        ]
       },
       {
         "이슈명": "에너지 관리",
@@ -2624,10 +2150,7 @@
         ],
         "관련_지표": [
           "RT-CH-130a.1"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "에너지 관리는 에너지 효율, 재생에너지 사용 등을 포함하므로 기후/환경 관련 이슈에 해당합니다."
+        ]
       },
       {
         "이슈명": "물 관리",
@@ -2642,10 +2165,7 @@
           "RT-CH-140a.1",
           "RT-CH-140a.2",
           "RT-CH-140a.3"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "물 관리는 직접적으로 인권 문제와 관련이 없지만, 기후/환경 문제와 밀접하게 연관되어 있습니다."
+        ]
       },
       {
         "이슈명": "유해폐기물 관리",
@@ -2656,10 +2176,7 @@
         ],
         "관련_지표": [
           "RT-CH-150a.1"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "유해 폐기물 관리는 인권과 직접적인 관련은 없지만, 환경 문제와 연관되어 있어 기후/환경 관련 이슈로 분류될 수 있습니다."
+        ]
       },
       {
         "이슈명": "지역사회 관계",
@@ -2669,10 +2186,7 @@
         ],
         "관련_지표": [
           "RT-CH-210a.1"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "지역사회 권리 침해는 인권 관련 이슈에 해당합니다."
+        ]
       },
       {
         "이슈명": "전 종업원(workforce) 보건 및 안전",
@@ -2684,10 +2198,7 @@
         "관련_지표": [
           "RT-CH-320a.1",
           "RT-CH-320a.2"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "전 종업원의 안전과 건강은 노동권의 중요한 부분이며, 이는 인권과 밀접하게 관련되어 있습니다."
+        ]
       },
       {
         "이슈명": "사용단계의 효율성을 위한 제품 설계",
@@ -2697,10 +2208,7 @@
         ],
         "관련_지표": [
           "RT-CH-410a.1"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "제품 설계가 인권 문제와 직접적인 관련이 없지만, 자원 효율성을 높여 환경 문제 해결에 기여하므로 기후/환경 관련 이슈로 판단합니다."
+        ]
       },
       {
         "이슈명": "화학물질 안전과 환경 책임주의",
@@ -2713,10 +2221,7 @@
         "관련_지표": [
           "RT-CH-410b.1",
           "RT-CH-410b.2"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "유해 화학물질 노출은 산업안전보건과 연결되어 인권 관련 이슈이며, 대체 물질 개발은 환경 오염 감소에 기여하므로 기후/환경 관련 이슈에 해당합니다."
+        ]
       },
       {
         "이슈명": "유전자변형 생물체",
@@ -2726,10 +2231,7 @@
         ],
         "관련_지표": [
           "RT-CH-410c.1"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "유전자변형 생물체 사용은 인권 문제보다는 생물 다양성, 환경 오염 등 환경 문제와 관련이 깊습니다."
+        ]
       },
       {
         "이슈명": "법적 환경 및 규제 환경의 관리",
@@ -2739,10 +2241,7 @@
         ],
         "관련_지표": [
           "RT-CH-530a.1"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "법적 환경 및 규제 관리는 직접적으로 인권 침해와 관련된 이슈는 아니며, 인권 관련 예시와 연관성이 적습니다."
+        ]
       },
       {
         "이슈명": "공정 안전, 비상사태 대비 및 대응",
@@ -2754,10 +2253,7 @@
         "관련_지표": [
           "RT-CH-540a.1",
           "RT-CH-540a.2"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "공정 안전은 산업안전보건과 관련이 있으므로 인권 관련 이슈에 해당합니다."
+        ]
       }
     ]
   },
@@ -2774,10 +2270,7 @@
         ],
         "관련_지표": [
           "RR-FC-130a.1"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "에너지 관리는 인권 관련 이슈와 직접적인 연관성이 낮고, 기후/환경 이슈인 온실가스 배출 및 에너지 효율과 관련이 깊다."
+        ]
       },
       {
         "이슈명": "전 종업원(workforce) 보건 및 안전",
@@ -2789,10 +2282,7 @@
         "관련_지표": [
           "RR-FC-320a.1",
           "RR-FC-320a.2"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "전 종업원 보건 및 안전은 산업안전보건과 관련된 문제로, 인권 이슈에 해당합니다."
+        ]
       },
       {
         "이슈명": "제품 효율",
@@ -2809,10 +2299,7 @@
           "RR-FC-410a.3",
           "RR-FC-410a.4",
           "RR-FC-410a.5"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "제품 효율은 인권 관련 이슈와 직접적인 관련이 없지만, 기후/환경 관련 이슈인 에너지 효율 향상에 해당한다."
+        ]
       },
       {
         "이슈명": "수명만료 제품관리",
@@ -2826,10 +2313,7 @@
           "RR-FC-410b.1",
           "RR-FC-410b.2",
           "RR-FC-410b.3"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "수명만료 제품 관리는 인권 관련 이슈보다는 환경 문제에 더 직접적으로 관련되어 있습니다."
+        ]
       },
       {
         "이슈명": "자재 조달",
@@ -2839,10 +2323,7 @@
         ],
         "관련_지표": [
           "RR-FC-440a.1"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "희소 자재 채굴 과정에서 아동 노동, 강제 노동, 열악한 노동 환경 등 인권 침해 문제가 발생할 수 있으며, 기후/환경 관련 문제도 발생할 수 있기 때문에 두 가지 질문 모두 'YES'로 답합니다."
+        ]
       }
     ]
   },
@@ -2859,10 +2340,7 @@
         "관련_지표": [
           "RR-PP-110a.1",
           "RR-PP-110a.2"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "온실가스 배출량 감축은 인권 관련 이슈가 아니며, 기후/환경 관련 이슈에 해당한다."
+        ]
       },
       {
         "이슈명": "대기질",
@@ -2872,10 +2350,7 @@
         ],
         "관련_지표": [
           "RR-PP-120a.1"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "대기질 관리는 환경 오염 관련 이슈이므로, 기후/환경 관련 이슈에 해당합니다."
+        ]
       },
       {
         "이슈명": "에너지 관리",
@@ -2887,10 +2362,7 @@
         ],
         "관련_지표": [
           "RR-PP-130a.1"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "에너지 관리는 주로 환경 관련 이슈이며, 직접적인 인권 관련성은 낮습니다."
+        ]
       },
       {
         "이슈명": "물 관리",
@@ -2904,10 +2376,7 @@
         "관련_지표": [
           "RR-PP-140a.1",
           "RR-PP-140a.2"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "물 관리는 직접적인 인권 침해와 관련이 적습니다."
+        ]
       },
       {
         "이슈명": "공급망 관리",
@@ -2919,10 +2388,7 @@
         "관련_지표": [
           "RR-PP-430a.1",
           "RR-PP-430a.2"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "공급망 관리는 산림 파괴 방지 및 자원 확보에 초점을 맞추므로 인권 관련 이슈와 직접적인 연관성이 낮습니다."
+        ]
       }
     ]
   },
@@ -2940,10 +2406,7 @@
         "관련_지표": [
           "EM-CM-110a.1",
           "EM-CM-110a.2"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "온실가스 배출량 관리는 인권과는 직접적인 관련이 없지만, 기후/환경 관련 이슈에 해당하기 때문이다."
+        ]
       },
       {
         "이슈명": "대기질",
@@ -2953,10 +2416,7 @@
         ],
         "관련_지표": [
           "EM-CM-120a.1"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "대기 오염은 근로자의 건강과 지역 사회의 건강에 영향을 미치므로 인권 관련 이슈이며, 환경 오염 이슈이므로 ISSB 및 KSSB 권고 대상입니다."
+        ]
       },
       {
         "이슈명": "에너지 관리",
@@ -2968,10 +2428,7 @@
         ],
         "관련_지표": [
           "EM-CM-130a.1"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "에너지 관리는 인권 관련 이슈보다는 기후/환경 관련 이슈에 더 직접적으로 관련되어 있으며, ISSB/KSSB에서 권고하는 ESG 요소에 해당한다."
+        ]
       },
       {
         "이슈명": "물 관리",
@@ -2983,10 +2440,7 @@
         ],
         "관련_지표": [
           "EM-CM-140a.1"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "물 관리는 인권 관련 이슈보다는 환경 문제에 더 직접적으로 관련되어 있습니다."
+        ]
       },
       {
         "이슈명": "폐기물 관리",
@@ -2998,10 +2452,7 @@
         ],
         "관련_지표": [
           "EM-CM-150a.1"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "폐기물 관리는 인권 관련 이슈보다는 환경 문제에 더 직접적으로 관련되어 있습니다."
+        ]
       },
       {
         "이슈명": "생물다양성 영향",
@@ -3013,10 +2464,7 @@
         "관련_지표": [
           "EM-CM-160a.1",
           "EM-CM-160a.2"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "채석장 운영으로 인한 생물다양성 영향은 인권과는 직접적인 관련이 없지만, 기후/환경 관련 이슈에 해당한다."
+        ]
       },
       {
         "이슈명": "전 종업원(workforce) 보건 및 안전",
@@ -3028,10 +2476,7 @@
         "관련_지표": [
           "EM-CM-320a.1",
           "EM-CM-320a.2"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "전 종업원 보건 및 안전 문제는 산업안전보건과 관련된 인권 이슈에 해당합니다."
+        ]
       },
       {
         "이슈명": "제품 혁신",
@@ -3043,10 +2488,7 @@
         "관련_지표": [
           "EM-CM-410a.1",
           "EM-CM-410a.2"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "제품 혁신은 지속가능한 건축 자재 개발에 초점을 맞추므로 인권과는 직접적인 관련이 없습니다."
+        ]
       },
       {
         "이슈명": "가격 책정의 무결성 및 투명성",
@@ -3056,10 +2498,7 @@
         ],
         "관련_지표": [
           "EM-CM-520a.1"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "가격 책정의 무결성 및 투명성은 인권과 직접적인 관련이 없으며, 기후/환경 관련 이슈도 아니다."
+        ]
       }
     ]
   },
@@ -3077,10 +2516,7 @@
         "관련_지표": [
           "EM-IS-110a.1",
           "EM-IS-110a.2"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "온실가스 배출량 감축은 인권과는 직접적인 관련이 없지만, 기후/환경 관련 이슈에 해당합니다."
+        ]
       },
       {
         "이슈명": "대기 배출량",
@@ -3090,10 +2526,7 @@
         ],
         "관련_지표": [
           "EM-IS-120a.1"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "대기 배출량은 직접적으로 인권 관련 이슈와 연관되지 않지만, 기후/환경 이슈에 해당하며 ISSB/KSSB에서 중요하게 다루는 항목이다."
+        ]
       },
       {
         "이슈명": "에너지 관리",
@@ -3105,10 +2538,7 @@
         "관련_지표": [
           "EM-IS-130a.1",
           "EM-IS-130a.2"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "에너지 관리는 인권 관련 이슈보다는 기후/환경 관련 이슈에 더 직접적으로 관련되어 있으며, 에너지 효율, 전력원 및 연료 관리는 온실가스 배출 및 환경 영향에 영향을 미치기 때문입니다."
+        ]
       },
       {
         "이슈명": "물 관리",
@@ -3120,10 +2550,7 @@
         ],
         "관련_지표": [
           "EM-IS-140a.1"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "물 관리는 인권 관련 이슈보다는 환경 문제에 더 직접적으로 관련되어 있습니다."
+        ]
       },
       {
         "이슈명": "폐기물 관리",
@@ -3135,10 +2562,7 @@
         ],
         "관련_지표": [
           "EM-IS-150a.1"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "폐기물 관리는 인권 관련 이슈보다는 환경 관련 이슈에 해당합니다."
+        ]
       },
       {
         "이슈명": "전 종업원(workforce) 보건 및 안전",
@@ -3150,10 +2574,7 @@
         ],
         "관련_지표": [
           "EM-IS-320a.1"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "전 종업원의 보건 및 안전은 산업안전보건과 관련되어 인권 이슈에 해당합니다."
+        ]
       },
       {
         "이슈명": "공급망 관리",
@@ -3163,10 +2584,7 @@
         ],
         "관련_지표": [
           "EM-IS-430a.1"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "철광석 및 석탄 채굴 과정에서 노동권(아동노동, 강제노동, 산업안전보건 등) 관련 위험이 발생할 수 있으며, 온실가스 배출, 환경오염 등 기후/환경 관련 위험도 존재한다."
+        ]
       }
     ]
   },
@@ -3185,10 +2603,7 @@
           "HC-BP-210a.1",
           "HC-BP-210a.2",
           "HC-BP-210a.3"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "임상시험 참여자의 안전은 개인의 신체적, 정신적 안전과 관련되므로 인권 이슈에 해당합니다."
+        ]
       },
       {
         "이슈명": "의약품 접근성",
@@ -3200,10 +2615,7 @@
         "관련_지표": [
           "HC-BP-240a.1",
           "HC-BP-240a.2"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "의약품 접근성은 건강에 대한 권리를 포함하며, 이는 인권의 중요한 측면이기 때문입니다."
+        ]
       },
       {
         "이슈명": "가격적정성 및 가격책정",
@@ -3217,10 +2629,7 @@
           "HC-BP-240b.1",
           "HC-BP-240b.2",
           "HC-BP-240b.3"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "의약품 가격 책정 문제는 인권과 직접적인 관련이 있다고 보기 어렵습니다. 가격 접근성 보장은 사회적 형평성 문제에 가깝습니다."
+        ]
       },
       {
         "이슈명": "의약품 안전성",
@@ -3237,10 +2646,7 @@
           "HC-BP-250a.3",
           "HC-BP-250a.4",
           "HC-BP-250a.5"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "의약품 안전성은 환자의 안전을 보장하는 문제이지, 인권 관련 이슈에 직접적으로 해당하지 않습니다. 기후/환경 관련 이슈도 아닙니다."
+        ]
       },
       {
         "이슈명": "위조 의약품",
@@ -3254,10 +2660,7 @@
           "HC-BP-260a.1",
           "HC-BP-260a.2",
           "HC-BP-260a.3"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "위조 의약품 이슈는 환자 안전과 관련된 문제로, 직접적인 인권 침해나 환경 관련 요소를 포함하지 않습니다."
+        ]
       },
       {
         "이슈명": "윤리 마케팅",
@@ -3269,10 +2672,7 @@
         "관련_지표": [
           "HC-BP-270a.1",
           "HC-BP-270a.2"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "윤리 마케팅은 인권 침해와 직접적인 관련이 없으며, 기후/환경 관련 이슈도 아닙니다."
+        ]
       },
       {
         "이슈명": "종업원 채용·개발·유지",
@@ -3284,10 +2684,7 @@
         "관련_지표": [
           "HC-BP-330a.1",
           "HC-BP-330a.2"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "종업원 채용, 개발, 유지는 노동권, 차별 등 인권과 관련된 요소들을 포함할 수 있습니다."
+        ]
       },
       {
         "이슈명": "공급망 관리",
@@ -3297,10 +2694,7 @@
         ],
         "관련_지표": [
           "HC-BP-430a.1"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "공급망 관리는 노동권(강제노동, 아동노동 등)과 같은 인권 침해 위험을 내포하므로 인권 관련 이슈로 간주됩니다."
+        ]
       },
       {
         "이슈명": "사업 윤리",
@@ -3312,10 +2706,7 @@
         "관련_지표": [
           "HC-BP-510a.1",
           "HC-BP-510a.2"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "사업 윤리 이슈는 직접적으로 인권 침해와 관련된 문제(노동권, 차별 등)를 다루지 않습니다. 또한 기후/환경 관련 이슈도 아닙니다."
+        ]
       }
     ]
   },
@@ -3332,10 +2723,7 @@
         "관련_지표": [
           "HC-MS-240a.1",
           "HC-MS-240a.2"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "가격 적정성 및 투명성 확보는 인권 관련 이슈와 직접적인 관련이 없고, 기후/환경 이슈와도 관련이 없다."
+        ]
       },
       {
         "이슈명": "제품 안전",
@@ -3350,10 +2738,7 @@
           "HC-MS-250a.2",
           "HC-MS-250a.3",
           "HC-MS-250a.4"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "제품 안전 이슈는 인권 문제와 직접적인 관련이 적습니다."
+        ]
       },
       {
         "이슈명": "윤리 마케팅",
@@ -3365,10 +2750,7 @@
         "관련_지표": [
           "HC-MS-270a.1",
           "HC-MS-270a.2"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "윤리 마케팅은 인권 침해와 직접적인 관련이 없습니다."
+        ]
       },
       {
         "이슈명": "제품 설계 및 수명주기 관리",
@@ -3380,10 +2762,7 @@
         "관련_지표": [
           "HC-MS-410a.1",
           "HC-MS-410a.2"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "제품 설계 및 수명주기 관리는 인권 관련 이슈와 직접적인 연관성이 낮습니다."
+        ]
       },
       {
         "이슈명": "공급망 관리",
@@ -3397,10 +2776,7 @@
           "HC-MS-430a.1",
           "HC-MS-430a.2",
           "HC-MS-430a.3"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "공급업체 감사는 노동권과 관련된 인권 침해 여부를 파악하기 위한 활동을 포함할 수 있다."
+        ]
       },
       {
         "이슈명": "사업 윤리",
@@ -3412,10 +2788,7 @@
         "관련_지표": [
           "HC-MS-510a.1",
           "HC-MS-510a.2"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "사업 윤리는 인권 관련 이슈와 직접적인 관련이 없으며, 기후/환경 관련 이슈도 아닙니다."
+        ]
       }
     ]
   },
@@ -3436,10 +2809,7 @@
           "GRI 11.1",
           "EM-RM-110a.1",
           "EM-RM-110a.2"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "온실가스 배출 및 관리는 인권 관련 이슈가 아니며, 기후/환경 관련 이슈에 해당한다."
+        ]
       },
       {
         "이슈명": "기후 적응, 회복력 및 전환",
@@ -3452,10 +2822,7 @@
         ],
         "관련_지표": [
           "GRI 11.2"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "전환 전략 수립 시 근로자 및 지역 사회에 미치는 영향을 고려해야 하므로 인권 관련 이슈와 관련이 있으며, 기후/환경 관련 이슈를 다루면서도 이사회 수준에서 중요하게 다뤄야 하는 이슈이므로 두 가지 모두 해당됩니다."
+        ]
       },
       {
         "이슈명": "대기 오염물질 관리",
@@ -3468,10 +2835,7 @@
           "GRI 11.3",
           "EM-RM-120a.1",
           "EM-RM-120a.2"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "대기 오염은 인체 건강에 직접적인 영향을 미치므로 산업안전보건 관련 인권 이슈에 해당합니다."
+        ]
       },
       {
         "이슈명": "생물다양성 및 생태계 보호",
@@ -3484,10 +2848,7 @@
         ],
         "관련_지표": [
           "GRI 11.4"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "생물다양성 및 생태계 보호는 인권 관련 이슈가 아니며, 기후/환경 관련 이슈에 해당합니다."
+        ]
       },
       {
         "이슈명": "폐기물 및 유해물질 관리",
@@ -3501,10 +2862,7 @@
           "GRI 11.5",
           "EM-RM-150a.1",
           "EM-RM-150a.2"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "폐기물 관리는 노동자의 안전과 관련된 측면이 있지만, 본질적으로 인권 이슈보다는 환경 이슈에 가깝습니다."
+        ]
       },
       {
         "이슈명": "물 관리 및 폐수 처리",
@@ -3520,10 +2878,7 @@
           "GRI 11.6",
           "EM-RM-140a.1",
           "EM-RM-140a.2"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "물 관리 및 폐수 처리는 인권 관련 이슈보다는 환경 문제에 더 직접적으로 연관되어 있습니다."
+        ]
       },
       {
         "이슈명": "자산 무결성, 폐쇄 및 안전 관리",
@@ -3540,10 +2895,7 @@
           "EM-RM-540a.1",
           "EM-RM-540a.2",
           "EM-RM-540a.3"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "공정 안전 사건 및 폐쇄 과정에서의 안전 관리는 산업안전보건과 관련되어 인권 이슈에 해당합니다."
+        ]
       },
       {
         "이슈명": "산업안전보건",
@@ -3556,10 +2908,7 @@
           "GRI 11.9",
           "EM-RM-320a.1",
           "EM-RM-320a.2"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "산업안전보건은 근로자의 안전과 건강을 보호하는 문제로, 노동권과 관련되어 인권 이슈에 해당합니다."
+        ]
       },
       {
         "이슈명": "고용 관행 및 인권",
@@ -3580,10 +2929,7 @@
           "GRI 11.11",
           "GRI 11.12",
           "GRI 11.13"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "고용 관행 및 인권 이슈는 노동자 인권 보호를 직접적으로 다루므로 인권 관련 이슈에 해당합니다."
+        ]
       },
       {
         "이슈명": "지역사회 상생 및 경제적 영향",
@@ -3607,10 +2953,7 @@
           "GRI 11.16",
           "GRI 11.17",
           "GRI 11.18"
-        ],
-        "is_human_rights": true,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "지역사회 권리 침해와 관련된 이슈가 포함되어 있으므로 인권 관련 이슈에 해당합니다."
+        ]
       },
       {
         "이슈명": "공정 경쟁 및 윤리 경영",
@@ -3630,10 +2973,7 @@
           "GRI 11.20",
           "GRI 11.21",
           "EM-RM-520a.1"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": false,
-        "ai_reasoning": "공정 경쟁 및 윤리 경영 이슈는 직접적으로 인권 침해와 관련이 없으며, 기후/환경 관련 이슈도 아닙니다."
+        ]
       },
       {
         "이슈명": "공공 정책 및 규제 환경 관리",
@@ -3646,10 +2986,7 @@
         "관련_지표": [
           "GRI 11.22",
           "EM-RM-530a.1"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "공공 정책 및 규제 환경 관리는 인권 관련 내용보다는 환경 및 사회적 지속가능성 목표 달성과 규제 대응에 초점을 맞추고 있습니다."
+        ]
       },
       {
         "이슈명": "제품 사양 및 청정 연료 혼합",
@@ -3661,10 +2998,7 @@
         "관련_지표": [
           "EM-RM-410a.1",
           "EM-RM-410a.2"
-        ],
-        "is_human_rights": false,
-        "issb_kssb_recommended": true,
-        "ai_reasoning": "제품 사양 및 청정 연료 혼합은 인권과는 직접적인 관련이 없지만, 기후/환경 관련 이슈에 해당한다."
+        ]
       }
     ]
   }

@@ -20,12 +20,11 @@ export class NewsScraper {
     console.log(`\n🔍 뉴스 검색: "${keyword}"`);
 
     try {
-      // Google Search API 대신 간단한 Mock 데이터 반환
-      // 실제로는 Google Custom Search API를 사용해야 함
-      const mockNews = this.generateMockNews(keyword, maxResults);
+      // 실제 Google Custom Search API 사용
+      const news = await this.searchNewsWithGoogle(keyword, maxResults);
 
-      console.log(`✅ ${mockNews.length}개 뉴스 기사 수집 완료`);
-      return mockNews;
+      console.log(`✅ ${news.length}개 뉴스 기사 수집 완료`);
+      return news;
 
     } catch (error) {
       console.error('❌ 뉴스 검색 실패:', error);
@@ -58,13 +57,22 @@ export class NewsScraper {
         const response = await fetch(url);
         const data = await response.json();
 
+        // 디버깅: API 응답 확인
+        if (data.error) {
+          console.error(`❌ API 에러 (페이지 ${i + 1}):`, data.error.message);
+          break;
+        }
+
         if (data.items) {
+          console.log(`   ✓ 페이지 ${i + 1}: ${data.items.length}개 결과 발견`);
           results.push(...data.items.map(item => ({
             title: item.title,
             snippet: item.snippet,
             link: item.link,
             publishDate: item.pagemap?.metatags?.[0]?.['article:published_time'] || new Date().toISOString(),
           })));
+        } else {
+          console.log(`   ⚠️  페이지 ${i + 1}: 결과 없음`);
         }
 
         // API 요청 제한 고려

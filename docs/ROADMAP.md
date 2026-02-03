@@ -78,42 +78,53 @@
 
 ## Phase 1: 1단계 기능 구현 (이슈풀 구축)
 
-### 1.1 산업군 기반 추천 API
-- [ ] **산업군 목록 조회 API 구현**
+### 1.1 산업군 기반 추천 API ✅ 완료
+- [x] **산업군 목록 조회 API 구현**
   - `GET /api/industries`
-  - **MVP: SASB 38개 산업 목록 반환**
-  - 카테고리별 그룹핑 (금융, 기술 및 통신, 서비스, 소비재 등 11개 카테고리)
-  - 산업별 메타데이터 포함 (섹터명, 이슈 개수)
+  - **MVP: SASB 38개 산업 목록 반환** ✅
+  - 카테고리별 그룹핑 (금융, 기술 및 통신, 서비스, 소비재 등 11개 카테고리) ✅
+  - 산업별 메타데이터 포함 (섹터명, 이슈 개수) ✅
+  - 파일: [industry-routes.js](../backend/src/routes/industry-routes.js)
 
-- [ ] **산업군별 이슈 추천 API 구현**
-  - `GET /api/issues/recommend/:sectorName`
-  - `sasb-industry-issues.json`에서 해당 섹터의 이슈 로드
-  - 응답에 이슈명, 이슈_정의, 공시_핵심, 관련_지표 포함
+- [x] **산업군별 이슈 추천 API 구현**
+  - `GET /api/industries/:sectorName/issues` ✅
+  - `sasb-industry-issues.json`에서 해당 섹터의 이슈 로드 ✅
+  - 응답에 이슈명, 이슈_정의, 공시_핵심, 관련_지표 포함 ✅
+  - AI 라벨링 데이터 포함 (is_human_rights, issb_kssb_recommended) ✅
 
-- [ ] **AI 이슈 라벨링 기능 구현** ⭐ PRD 업데이트 반영
-  - **인권 이슈 판단 로직**
-    - Gemini AI로 이슈명 + 이슈_정의 분석
+- [x] **AI 이슈 라벨링 기능 구현** ⭐ PRD 업데이트 반영
+  - **인권 이슈 판단 로직** ✅
+    - Gemini 2.0 Flash Lite 사용
+    - 이슈명 + 이슈_정의 분석
     - 판단 기준: 인권, 안전, 차별 금지, 노동 조건 관련 여부
-    - SASB Human Capital/Social Capital Dimension 해당 여부
     - 결과: `is_human_rights: true/false` 태그 추가
-  - **기후 이슈 판단 로직**
-    - Gemini AI로 이슈명 + 이슈_정의 분석
+    - **70개 인권 이슈 식별 (전체 222개 중 32%)**
+  - **기후 이슈 판단 로직** ✅
+    - Gemini 2.0 Flash Lite 사용
+    - 이슈명 + 이슈_정의 분석
     - 판단 기준: GHG 배출, 에너지, 기후변화 물리적/전환 위험 관련 여부
-    - ISSB IFRS S2, KSSB 기후 공시 기준 부합 여부
     - 결과: `issb_kssb_recommended: true/false` 태그 추가
+    - **111개 기후/환경 이슈 식별 (전체 222개 중 50%)**
+  - **429 에러 자동 재시도 로직 구현** ✅
+    - 최대 3번 재시도, 30초 대기
+    - 파일: [issue-labeling-service.js](../backend/src/services/issue-labeling-service.js)
+  - **라벨링 스크립트** ✅
+    - `npm run label-issues`: 전체 이슈 라벨링
+    - [retry-failed-labels.js](../backend/scripts/retry-failed-labels.js): 실패한 이슈만 재시도
   - 응답 형식:
     ```json
     {
       "sector": "[금융] 보험",
+      "totalIssues": 5,
       "issues": [
         {
-          "issueName": "환경 위험 노출",
-          "issueDefinition": "...",
-          "disclosureTopics": ["...", "..."],
-          "relatedMetrics": ["FN-IN-450a.1", "..."],
+          "이슈명": "환경 위험 노출",
+          "이슈_정의": "...",
+          "공시_핵심": ["...", "..."],
+          "관련_지표": ["FN-IN-450a.1", "..."],
           "is_human_rights": false,
           "issb_kssb_recommended": true,
-          "category": "E"
+          "ai_reasoning": "기후변화로 인한 자연재해 관련"
         }
       ]
     }
