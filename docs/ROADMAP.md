@@ -40,58 +40,39 @@
 - [x] standards/ 폴더 생성 및 PDF 파일 정리
 - [x] .gitignore 업데이트 및 보안 검증
 
-### 0.6 산업군별 이슈 데이터 정리
-- [ ] **GRI 산업별 이슈 JSON 작성**
-  - 파일 위치: `backend/src/data/gri-industry-issues.json`
-  - GRI 11 (석유 및 가스), GRI 12 (석탄), GRI 13 (농수산업), GRI 14 (광업) 섹터별 작성
-  - 각 섹터의 필수/권장/선택 이슈 정리
-  - 구조 예시:
-    ```json
-    {
-      "oil-and-gas": {
-        "industryName": "석유 및 가스",
-        "standardReference": "GRI 11",
-        "issues": [
-          {
-            "issueName": "온실가스 배출",
-            "description": "Scope 1, 2, 3 배출량 관리 및 감축",
-            "category": "E",
-            "griReference": "GRI 305",
-            "priority": "필수"
-          }
-        ]
-      }
-    }
-    ```
+### 0.6 산업군별 이슈 데이터 정리 ✅ 완료
 
-- [ ] **SASB 산업별 이슈 JSON 작성**
+- [x] **SASB 산업별 이슈 JSON 작성** ✅
   - 파일 위치: `backend/src/data/sasb-industry-issues.json`
-  - SASB 77개 산업 전체 작성
-  - 각 산업의 지속가능성 공시 주제 정리
-  - 구조 예시:
+  - **38개 SASB 산업 이슈 정리 완료** (128KB, 3,004줄)
+  - 각 산업의 지속가능성 공시 주제, 이슈 정의, 공시 핵심, 관련 지표 포함
+  - 데이터 구조:
     ```json
-    {
-      "E010100": {
-        "industryCode": "E010100",
-        "industryName": "석유 및 가스 - 탐사 및 생산",
-        "sector": "추출물 및 광물 처리",
-        "issues": [
+    [
+      {
+        "섹터명": "[금융] 보험",
+        "이슈_목록": [
           {
-            "issueName": "온실가스 배출",
-            "description": "직간접 온실가스 배출 관리",
-            "category": "E",
-            "sasbReference": "EM-EP-110a.1",
-            "priority": "필수"
+            "이슈명": "투명한 정보 및 고객들을 위한 공정한 자문",
+            "이슈_정의": "...",
+            "공시_핵심": ["..."],
+            "관련_지표": ["FN-IN-270a.1", ...]
           }
         ]
       }
-    }
+    ]
     ```
+  - 포함된 카테고리:
+    - 금융 (4개), 기술 및 통신 (4개), 서비스 (3개)
+    - 소비재 (3개), 식음료 (2개), 운송 (6개)
+    - 인프라 (4개), 자원 변환 (5개)
+    - 재생가능 자원 및 대체 에너지 (2개)
+    - 추출물 및 광물 처리 (3개), 헬스케어 (2개)
 
-- [ ] **산업군 코드 매핑 테이블 검증**
-  - 현재 `backend/src/config/industry-mapping.js` 파일 확인
-  - SASB 산업코드 ↔ GRI 섹터 ↔ 한글명 ↔ 영문명 매핑 완성도 체크
-  - 필요시 보완
+**📌 MVP 스코프:**
+- 1단계 산업군 기반 이슈 추천은 **SASB 38개 산업으로 한정**
+- `sasb-industry-issues.json`이 1단계 이슈 추천의 **전체 데이터 소스**
+- GRI 섹터 표준 통합은 Post-MVP에서 추가 예정
 
 ---
 
@@ -100,9 +81,9 @@
 ### 1.1 산업군 기반 추천 API
 - [ ] **산업군 목록 조회 API 구현**
   - `GET /api/industries`
-  - SASB 77개 산업 + GRI 4개 섹터 통합 목록 반환
-  - 카테고리별 그룹핑 (금융, 헬스케어, 인프라, 서비스 등)
-  - 산업별 메타데이터 포함 (한글명, 영문명, 설명)
+  - **MVP: SASB 38개 산업 목록 반환**
+  - 카테고리별 그룹핑 (금융, 기술 및 통신, 서비스, 소비재 등 11개 카테고리)
+  - 산업별 메타데이터 포함 (섹터명, 이슈 개수)
 
 - [ ] **산업군별 이슈 추천 API 구현**
   - `GET /api/issues/recommend/industry/:industryCode`
