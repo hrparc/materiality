@@ -14,11 +14,11 @@ const ProjectListPage = () => {
   const navigate = useNavigate();
   const { setProjectId, setProjectName, setSelectedIndustry } = useProject();
 
-  // 프로젝트 목록 (나중에 API에서 가져옴)
-  const [projects, setProjects] = useState([
-    // Mock data - 나중에 API 연동
-    // { id: '1', name: '2024 ESG 중대성 평가', industry: '[헬스케어] 의료장비 및 용품', createdAt: '2024-01-15' },
-  ]);
+  // 프로젝트 목록 (localStorage에서 로드)
+  const [projects, setProjects] = useState(() => {
+    const saved = localStorage.getItem('esg_projects');
+    return saved ? JSON.parse(saved) : [];
+  });
 
   // 새 프로젝트 생성 폼
   const [showCreateForm, setShowCreateForm] = useState(false);
@@ -82,7 +82,9 @@ const ProjectListPage = () => {
       createdAt: new Date().toISOString().split('T')[0],
     };
 
-    setProjects([newProject, ...projects]);
+    const updatedProjects = [newProject, ...projects];
+    setProjects(updatedProjects);
+    localStorage.setItem('esg_projects', JSON.stringify(updatedProjects));
     setShowCreateForm(false);
     setFormData({ name: '', category: '', industry: '' });
 

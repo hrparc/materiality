@@ -64,9 +64,9 @@ const api = {
    * 특정 산업군의 이슈 추천
    */
   getIndustryIssues: async (industry) => {
-    const response = await apiClient.get(`/api/issues/recommend`, {
-      params: { industry }
-    });
+    // industry 값을 URL path parameter로 전달
+    const encodedIndustry = encodeURIComponent(industry);
+    const response = await apiClient.get(`/api/industries/${encodedIndustry}/issues`);
     return response.data;
   },
 
@@ -85,6 +85,20 @@ const api = {
     return response.data;
   },
 
+  /**
+   * 미디어 기반 이슈 추천 (중복 제거 및 빈도 분석 포함)
+   */
+  recommendMediaIssues: async (keyword, period = 'y1', topN = 10) => {
+    const response = await apiClient.post('/api/media/recommend-issues', {
+      keyword,
+      period,
+      maxResults: 100, // 내부적으로 많이 수집
+      topN,
+      enableDeduplication: true
+    });
+    return response.data;
+  },
+
   // ============================================
   // 3. 수동 이슈 입력 관련 API
   // ============================================
@@ -92,10 +106,14 @@ const api = {
   /**
    * 수동 이슈 생성
    */
-  createManualIssue: async (projectId, issueData) => {
+  createManualIssue: async (이슈명, 이슈_정의, category, is_human_rights, issb_kssb_recommended, projectId = 'default') => {
     const response = await apiClient.post('/api/issues/manual', {
       projectId,
-      ...issueData
+      이슈명,
+      이슈_정의,
+      category,
+      is_human_rights,
+      issb_kssb_recommended
     });
     return response.data;
   },

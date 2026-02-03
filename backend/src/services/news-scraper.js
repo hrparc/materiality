@@ -1,4 +1,5 @@
 import { getGeminiModel } from '../config/gemini.js';
+import { DeduplicationService } from './deduplication-service.js';
 
 /**
  * 뉴스 스크래핑 및 분석 서비스
@@ -8,6 +9,7 @@ export class NewsScraper {
   constructor(genAI) {
     this.genAI = genAI;
     this.flashModel = getGeminiModel(genAI, 'flash');
+    this.deduplicationService = new DeduplicationService(genAI);
   }
 
   /**
@@ -169,13 +171,29 @@ export class NewsScraper {
   }
 
   /**
-   * Gemini로 뉴스 분석 및 ESG 이슈 분류
+   * Gemini로 뉴스 분석 및 ESG 이슈 분류 (2단계 파이프라인)
    * @param {Array} newsArticles - 뉴스 기사 배열
+   * @param {boolean} useTwoStage - 2단계 파이프라인 사용 여부 (기본: true, 100개 이상일 때 자동 적용)
    * @returns {Promise<Array>} 분석된 뉴스 배열
    */
-  async analyzeNews(newsArticles) {
-    console.log(`\n🤖 Gemini로 ${newsArticles.length}개 뉴스 분석 시작`);
+  async analyzeNews(newsArticles, useTwoStage = null) {
+    // 자동 결정: 100개 이상이면 2단계 파이프라인 사용
+    const shouldUseTwoStage = useTwoStage !== null ? useTwoStage : newsArticles.length >= 100;
 
+    if (shouldUseTwoStage) {
+      console.log(`\n🚀 2단계 파이프라인 분석 시작: ${newsArticles.length}개 뉴스`);
+      return await this.analyzeTwoStage(newsArticles);
+    } else {
+      console.log(`\n🤖 Gemini로 ${newsArticles.length}개 뉴스 분석 시작`);
+      return await this.analyzeStandard(newsArticles);
+    }
+  }
+
+  /**
+   * 표준 분석 (기존 방식)
+   * @private
+   */
+  async analyzeStandard(newsArticles) {
     const analyzedNews = [];
 
     for (let i = 0; i < newsArticles.length; i++) {
@@ -206,6 +224,108 @@ export class NewsScraper {
 
     console.log(`✅ ${analyzedNews.length}개 뉴스 분석 완료\n`);
     return analyzedNews;
+  }
+
+  /**
+   * 2단계 파이프라인 분석
+   * Stage 1: 빠른 ESG 필터링 (제목만, Gemini Flash)
+   * Stage 2: 상세 이슈 추출 (필터링된 기사만)
+   * @private
+   */
+  async analyzeTwoStage(newsArticles) {
+    // Stage 1: 빠른 ESG 필터링
+    console.log(`\n   [Stage 1] 빠른 ESG 필터링 시작...`);
+    const esgFiltered = await this.quickESGFilter(newsArticles);
+    console.log(`   [Stage 1] 완료: ${newsArticles.length}개 → ${esgFiltered.length}개 (${((1 - esgFiltered.length / newsArticles.length) * 100).toFixed(1)}% 필터링)`);
+
+    // Stage 2: 상세 분석 (필터링된 기사만)
+    console.log(`\n   [Stage 2] 상세 이슈 추출 시작...`);
+    const analyzedNews = await this.analyzeStandard(esgFiltered);
+    console.log(`   [Stage 2] 완료: ${analyzedNews.length}개 기사 분석 완료`);
+
+    // 필터링된 기사들 (ESG 무관)
+    const filteredOut = newsArticles.filter(
+      article => !esgFiltered.find(filtered => filtered.link === article.link)
+    );
+
+    // 필터링된 기사도 결과에 포함 (analysis: null)
+    const allNews = [
+      ...analyzedNews,
+      ...filteredOut.map(article => ({
+        ...article,
+        analysis: {
+          isESGRelated: false,
+          esgCategories: [],
+          issues: [],
+          sentiment: 'neutral',
+          relevanceScore: 0,
+        },
+      })),
+    ];
+
+    console.log(`✅ 2단계 파이프라인 완료: 총 ${allNews.length}개 (ESG 관련: ${analyzedNews.length}개)\n`);
+    return allNews;
+  }
+
+  /**
+   * Stage 1: 빠른 ESG 필터링 (제목만 분석)
+   * @private
+   */
+  async quickESGFilter(newsArticles) {
+    const esgRelated = [];
+    const batchSize = 50; // 배치 크기
+
+    for (let i = 0; i < newsArticles.length; i += batchSize) {
+      const batch = newsArticles.slice(i, i + batchSize);
+
+      try {
+        // 제목만 추출하여 한 번에 분석
+        const titles = batch.map((article, idx) => `${idx + 1}. ${article.title}`).join('\n');
+
+        const prompt = `
+다음은 뉴스 기사 제목 목록입니다. 각 제목이 ESG (환경, 사회, 지배구조) 이슈와 관련이 있는지 빠르게 판단해주세요.
+
+제목 목록:
+${titles}
+
+다음 형식으로 JSON 배열로 응답해주세요 (번호만):
+[1, 3, 5, ...]  (ESG 관련이 있는 제목의 번호만 포함)
+
+ESG 관련 키워드 예시:
+- 환경(E): 탄소, 배출, 에너지, 기후, 환경, 폐기물, 재생에너지
+- 사회(S): 인권, 노동, 안전, 다양성, 지역사회, 공급망
+- 지배구조(G): 윤리, 부패, 이사회, 준법, 투명성
+`;
+
+        const result = await this.flashModel.generateContent(prompt);
+        const response = result.response.text();
+
+        // JSON 파싱
+        const jsonMatch = response.match(/\[([\d,\s]+)\]/);
+        if (jsonMatch) {
+          const esgIndices = jsonMatch[1].split(',').map(n => parseInt(n.trim()) - 1);
+
+          // ESG 관련 기사만 추가
+          esgIndices.forEach(idx => {
+            if (idx >= 0 && idx < batch.length) {
+              esgRelated.push(batch[idx]);
+            }
+          });
+        }
+
+        console.log(`      ✓ 배치 ${Math.floor(i / batchSize) + 1}/${Math.ceil(newsArticles.length / batchSize)} 완료`);
+
+        // Rate limiting
+        await new Promise(resolve => setTimeout(resolve, 300));
+
+      } catch (error) {
+        console.error(`      ⚠️  배치 ${Math.floor(i / batchSize) + 1} 필터링 실패:`, error.message);
+        // 실패 시 해당 배치 전체를 ESG 관련으로 간주 (안전하게)
+        esgRelated.push(...batch);
+      }
+    }
+
+    return esgRelated;
   }
 
   /**
@@ -312,9 +432,10 @@ export class NewsScraper {
    * 뉴스에서 추출된 이슈의 빈도수 집계 및 상위 이슈 추천
    * @param {Array} analyzedNews - AI 분석이 완료된 뉴스 배열
    * @param {number} topN - 추천할 상위 이슈 개수 (기본: 10)
-   * @returns {Array} 빈도수 높은 상위 이슈 목록
+   * @param {boolean} enableDeduplication - 중복 제거 활성화 여부 (기본: true)
+   * @returns {Promise<Array>} 빈도수 높은 상위 이슈 목록
    */
-  recommendTopIssues(analyzedNews, topN = 10) {
+  async recommendTopIssues(analyzedNews, topN = 10, enableDeduplication = true) {
     console.log('\n📊 이슈 빈도수 집계 및 추천 시작...');
 
     // ESG 관련 뉴스만 필터링
@@ -325,17 +446,27 @@ export class NewsScraper {
       return [];
     }
 
+    console.log(`   ESG 관련 뉴스: ${esgNews.length}개`);
+
+    // 중복 제거 (옵션)
+    let processedNews = esgNews;
+    if (enableDeduplication) {
+      processedNews = await this.deduplicationService.deduplicateArticles(esgNews);
+    }
+
     // 이슈별 빈도수 및 관련 뉴스 집계
     const issueMap = new Map();
 
-    esgNews.forEach(news => {
+    processedNews.forEach(news => {
       const issues = news.analysis?.issues || [];
+      const duplicateWeight = news.duplicate_count || 1; // 중복 개수를 가중치로 사용
 
       issues.forEach(issueName => {
         if (!issueMap.has(issueName)) {
           issueMap.set(issueName, {
             이슈명: issueName,
             언급횟수: 0,
+            실제_기사수: 0, // 중복 포함 실제 기사 수
             관련_뉴스: [],
             긍정_뉴스: 0,
             부정_뉴스: 0,
@@ -346,6 +477,7 @@ export class NewsScraper {
 
         const issueData = issueMap.get(issueName);
         issueData.언급횟수++;
+        issueData.실제_기사수 += duplicateWeight; // 중복 개수 반영
 
         // 대표 뉴스 추가 (최대 5개)
         if (issueData.관련_뉴스.length < 5) {
@@ -356,16 +488,17 @@ export class NewsScraper {
             원문링크: news.originalLink,
             날짜: news.publishDate,
             감정: news.analysis.sentiment,
+            중복_개수: duplicateWeight, // 중복 정보 포함
           });
         }
 
-        // 감정 분석 집계
+        // 감정 분석 집계 (중복 개수 반영)
         if (news.analysis.sentiment === 'positive') {
-          issueData.긍정_뉴스++;
+          issueData.긍정_뉴스 += duplicateWeight;
         } else if (news.analysis.sentiment === 'negative') {
-          issueData.부정_뉴스++;
+          issueData.부정_뉴스 += duplicateWeight;
         } else {
-          issueData.중립_뉴스++;
+          issueData.중립_뉴스 += duplicateWeight;
         }
 
         // ESG 카테고리 집계
@@ -375,26 +508,26 @@ export class NewsScraper {
       });
     });
 
-    // Map을 배열로 변환하고 빈도수로 정렬
+    // Map을 배열로 변환하고 실제 기사수로 정렬 (중복 반영)
     const sortedIssues = Array.from(issueMap.values())
       .map(issue => ({
         ...issue,
         ESG_카테고리: Array.from(issue.ESG_카테고리),
-        부정_비율: issue.언급횟수 > 0
-          ? ((issue.부정_뉴스 / issue.언급횟수) * 100).toFixed(1)
+        부정_비율: issue.실제_기사수 > 0
+          ? ((issue.부정_뉴스 / issue.실제_기사수) * 100).toFixed(1)
           : 0,
-        긍정_비율: issue.언급횟수 > 0
-          ? ((issue.긍정_뉴스 / issue.언급횟수) * 100).toFixed(1)
+        긍정_비율: issue.실제_기사수 > 0
+          ? ((issue.긍정_뉴스 / issue.실제_기사수) * 100).toFixed(1)
           : 0,
       }))
-      .sort((a, b) => b.언급횟수 - a.언급횟수)
+      .sort((a, b) => b.실제_기사수 - a.실제_기사수) // 실제 기사수로 정렬
       .slice(0, topN);
 
     console.log(`✅ 총 ${issueMap.size}개 이슈 중 상위 ${sortedIssues.length}개 추천\n`);
 
     // 상위 이슈 요약 출력
     sortedIssues.forEach((issue, index) => {
-      console.log(`   ${index + 1}. ${issue.이슈명} (${issue.언급횟수}회, 부정 ${issue.부정_비율}%)`);
+      console.log(`   ${index + 1}. ${issue.이슈명} (${issue.실제_기사수}회, 부정 ${issue.부정_비율}%)`);
     });
 
     return sortedIssues;

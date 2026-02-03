@@ -19,6 +19,8 @@ const IssuePoolBuilderPage = () => {
   const { projectId } = useParams();
   const { projectName, selectedIndustry } = useProject();
 
+  console.log('IssuePoolBuilderPage 렌더:', { projectId, projectName, selectedIndustry });
+
   // 이슈풀 후보 (왼쪽)
   const [candidateIssues, setCandidateIssues] = useState([]);
 
@@ -27,18 +29,42 @@ const IssuePoolBuilderPage = () => {
 
   // UI 상태
   const [showAddMenu, setShowAddMenu] = useState(false);
-  const [showIndustryModal, setShowIndustryModal] = useState(false);
   const [showMediaModal, setShowMediaModal] = useState(false);
   const [showManualModal, setShowManualModal] = useState(false);
   const [filterCategory, setFilterCategory] = useState('ALL');
+  const [loading, setLoading] = useState(false);
 
-  // 산업군 이슈 추가
-  const handleAddIndustryIssues = async () => {
-    if (!selectedIndustry) {
-      alert('프로젝트 생성 시 산업군을 선택해야 합니다');
-      return;
+  // 미디어 조사 폼
+  const [mediaForm, setMediaForm] = useState({
+    keyword: '',
+    period: 'y1',
+    topN: 10,
+  });
+
+  // 수동 입력 폼
+  const [manualForm, setManualForm] = useState({
+    이슈명: '',
+    이슈_정의: '',
+    category: 'E',
+    is_human_rights: false,
+    issb_kssb_recommended: false,
+  });
+
+  // 컴포넌트 마운트 시 산업군 이슈 자동 로드
+  useEffect(() => {
+    console.log('useEffect 실행:', { selectedIndustry, candidateIssuesLength: candidateIssues.length });
+    if (selectedIndustry && candidateIssues.length === 0) {
+      console.log('산업군 이슈 로딩 시작:', selectedIndustry);
+      loadIndustryIssues();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selectedIndustry]);
 
+  // 산업군 이슈 로드
+  const loadIndustryIssues = async () => {
+    if (!selectedIndustry) return;
+
+    setLoading(true);
     try {
       const data = await api.getIndustryIssues(selectedIndustry);
       const newIssues = data.issues.map((issue) => ({
@@ -47,12 +73,11 @@ const IssuePoolBuilderPage = () => {
         source: 'industry',
         isCandidate: true,
       }));
-      setCandidateIssues([...candidateIssues, ...newIssues]);
-      setShowIndustryModal(false);
-      setShowAddMenu(false);
+      setCandidateIssues(newIssues);
     } catch (err) {
-      alert('산업군 이슈를 불러오는데 실패했습니다');
-      console.error(err);
+      console.error('산업군 이슈 로딩 실패:', err);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -134,15 +159,6 @@ const IssuePoolBuilderPage = () => {
                 </button>
                 {showAddMenu && (
                   <div style={styles.addMenu}>
-                    <button
-                      onClick={() => {
-                        setShowIndustryModal(true);
-                        setShowAddMenu(false);
-                      }}
-                      style={styles.addMenuItem}
-                    >
-                      🏭 온실가스 배출 (산업군 기반)
-                    </button>
                     <button
                       onClick={() => {
                         setShowMediaModal(true);
@@ -257,40 +273,112 @@ const IssuePoolBuilderPage = () => {
       </div>
 
       {/* 모달들 */}
-      {showIndustryModal && (
-        <div style={styles.modal} onClick={() => setShowIndustryModal(false)}>
-          <div style={styles.modalContent} onClick={(e) => e.stopPropagation()}>
-            <h3 style={styles.modalTitle}>산업군 기반 이슈 추가</h3>
-            <p>선택한 산업군: {selectedIndustry || '없음'}</p>
-            <div style={styles.modalButtons}>
-              <button
-                onClick={() => setShowIndustryModal(false)}
-                style={styles.buttonSecondary}
-              >
-                취소
-              </button>
-              <button
-                onClick={handleAddIndustryIssues}
-                style={styles.buttonPrimary}
-              >
-                추가
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
-
       {showMediaModal && (
         <div style={styles.modal} onClick={() => setShowMediaModal(false)}>
           <div style={styles.modalContent} onClick={(e) => e.stopPropagation()}>
-            <h3 style={styles.modalTitle}>미디어 조사 (준비중)</h3>
-            <p>미디어 분석 기능은 곧 추가될 예정입니다</p>
-            <button
-              onClick={() => setShowMediaModal(false)}
-              style={styles.buttonSecondary}
+            <h3 style={styles.modalTitle}>미디어 조사</h3>
+            <form
+              onSubmit={async (e) => {
+                e.preventDefault();
+                if (!mediaForm.keyword.trim()) {
+                  alert('키워드를 입력해주세요');
+                  return;
+                }
+
+                setLoading(true);
+                try {
+                  const data = await api.recommendMediaIssues(
+                    mediaForm.keyword,
+                    mediaForm.period,
+                    mediaForm.topN
+                  );
+                  const newIssues = data.recommendedIssues.map((issue) => ({
+                    ...issue,
+                    id: `media_${Date.now()}_${Math.random()}`,
+                    source: 'media',
+                    isCandidate: true,
+                    // 이슈 데이터 매핑
+                    이슈명: issue.이슈명,
+                    이슈_정의: `언급 ${issue.실제_기사수}회 (부정 ${issue.부정_비율}%, 긍정 ${issue.긍정_비율}%)`,
+                    category: issue.ESG_카테고리?.[0] || 'E',
+                  }));
+                  setCandidateIssues([...candidateIssues, ...newIssues]);
+                  setShowMediaModal(false);
+                  setMediaForm({ keyword: '', period: 'y1', topN: 10 });
+                  alert(`${newIssues.length}개의 이슈가 추가되었습니다`);
+                } catch (err) {
+                  alert('미디어 분석에 실패했습니다');
+                  console.error(err);
+                } finally {
+                  setLoading(false);
+                }
+              }}
             >
-              닫기
-            </button>
+              <div style={styles.formGroup}>
+                <label style={styles.label}>검색 키워드 *</label>
+                <input
+                  type="text"
+                  value={mediaForm.keyword}
+                  onChange={(e) =>
+                    setMediaForm({ ...mediaForm, keyword: e.target.value })
+                  }
+                  placeholder="예: 삼성전자"
+                  style={styles.input}
+                  autoFocus
+                />
+              </div>
+              <div style={styles.formGroup}>
+                <label style={styles.label}>분석 기간</label>
+                <select
+                  value={mediaForm.period}
+                  onChange={(e) =>
+                    setMediaForm({ ...mediaForm, period: e.target.value })
+                  }
+                  style={styles.input}
+                >
+                  <option value="y1">최근 1년</option>
+                  <option value="m6">최근 6개월</option>
+                  <option value="m3">최근 3개월</option>
+                  <option value="m1">최근 1개월</option>
+                </select>
+              </div>
+              <div style={styles.formGroup}>
+                <label style={styles.label}>추천할 이슈 개수</label>
+                <input
+                  type="number"
+                  value={mediaForm.topN}
+                  onChange={(e) =>
+                    setMediaForm({
+                      ...mediaForm,
+                      topN: parseInt(e.target.value) || 10,
+                    })
+                  }
+                  min="1"
+                  max="20"
+                  style={styles.input}
+                />
+              </div>
+              <div style={styles.modalButtons}>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setShowMediaModal(false);
+                    setMediaForm({ keyword: '', period: 'y1', topN: 10 });
+                  }}
+                  style={styles.buttonSecondary}
+                  disabled={loading}
+                >
+                  취소
+                </button>
+                <button
+                  type="submit"
+                  style={styles.buttonPrimary}
+                  disabled={loading}
+                >
+                  {loading ? '분석 중...' : '분석 시작'}
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       )}
@@ -298,14 +386,146 @@ const IssuePoolBuilderPage = () => {
       {showManualModal && (
         <div style={styles.modal} onClick={() => setShowManualModal(false)}>
           <div style={styles.modalContent} onClick={(e) => e.stopPropagation()}>
-            <h3 style={styles.modalTitle}>직접 추가 (준비중)</h3>
-            <p>수동 이슈 입력 기능은 곧 추가될 예정입니다</p>
-            <button
-              onClick={() => setShowManualModal(false)}
-              style={styles.buttonSecondary}
+            <h3 style={styles.modalTitle}>직접 추가</h3>
+            <form
+              onSubmit={async (e) => {
+                e.preventDefault();
+                if (!manualForm.이슈명.trim() || !manualForm.이슈_정의.trim()) {
+                  alert('이슈명과 이슈 정의를 입력해주세요');
+                  return;
+                }
+
+                setLoading(true);
+                try {
+                  const data = await api.createManualIssue(
+                    manualForm.이슈명,
+                    manualForm.이슈_정의,
+                    manualForm.category,
+                    manualForm.is_human_rights,
+                    manualForm.issb_kssb_recommended,
+                    projectId
+                  );
+                  const newIssue = {
+                    ...data.issue,
+                    id: `manual_${Date.now()}_${Math.random()}`,
+                    source: 'manual',
+                    isCandidate: true,
+                  };
+                  setCandidateIssues([...candidateIssues, newIssue]);
+                  setShowManualModal(false);
+                  setManualForm({
+                    이슈명: '',
+                    이슈_정의: '',
+                    category: 'E',
+                    is_human_rights: false,
+                    issb_kssb_recommended: false,
+                  });
+                  alert('이슈가 추가되었습니다');
+                } catch (err) {
+                  alert('이슈 추가에 실패했습니다');
+                  console.error(err);
+                } finally {
+                  setLoading(false);
+                }
+              }}
             >
-              닫기
-            </button>
+              <div style={styles.formGroup}>
+                <label style={styles.label}>이슈명 *</label>
+                <input
+                  type="text"
+                  value={manualForm.이슈명}
+                  onChange={(e) =>
+                    setManualForm({ ...manualForm, 이슈명: e.target.value })
+                  }
+                  placeholder="예: 제품 품질 관리"
+                  style={styles.input}
+                  autoFocus
+                />
+              </div>
+              <div style={styles.formGroup}>
+                <label style={styles.label}>이슈 정의 *</label>
+                <textarea
+                  value={manualForm.이슈_정의}
+                  onChange={(e) =>
+                    setManualForm({ ...manualForm, 이슈_정의: e.target.value })
+                  }
+                  placeholder="이슈에 대한 설명을 입력하세요"
+                  style={{ ...styles.input, minHeight: '80px', resize: 'vertical' }}
+                />
+              </div>
+              <div style={styles.formGroup}>
+                <label style={styles.label}>카테고리 *</label>
+                <select
+                  value={manualForm.category}
+                  onChange={(e) =>
+                    setManualForm({ ...manualForm, category: e.target.value })
+                  }
+                  style={styles.input}
+                >
+                  <option value="E">환경 (E)</option>
+                  <option value="S">사회 (S)</option>
+                  <option value="G">거버넌스 (G)</option>
+                </select>
+              </div>
+              <div style={styles.formGroup}>
+                <label style={{ ...styles.label, display: 'flex', alignItems: 'center' }}>
+                  <input
+                    type="checkbox"
+                    checked={manualForm.is_human_rights}
+                    onChange={(e) =>
+                      setManualForm({
+                        ...manualForm,
+                        is_human_rights: e.target.checked,
+                      })
+                    }
+                    style={{ marginRight: '8px' }}
+                  />
+                  인권 이슈
+                </label>
+              </div>
+              <div style={styles.formGroup}>
+                <label style={{ ...styles.label, display: 'flex', alignItems: 'center' }}>
+                  <input
+                    type="checkbox"
+                    checked={manualForm.issb_kssb_recommended}
+                    onChange={(e) =>
+                      setManualForm({
+                        ...manualForm,
+                        issb_kssb_recommended: e.target.checked,
+                      })
+                    }
+                    style={{ marginRight: '8px' }}
+                  />
+                  기후/환경 관련 이슈 (ISSB/KSSB 권장)
+                </label>
+              </div>
+              <div style={styles.modalButtons}>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setShowManualModal(false);
+                    setManualForm({
+                      이슈명: '',
+                      이슈_정의: '',
+                      category: 'E',
+                      is_human_rights: false,
+                      issb_kssb_recommended: false,
+                    });
+                  }}
+                  style={styles.buttonSecondary}
+                  disabled={loading}
+                >
+                  취소
+                </button>
+                <button
+                  type="submit"
+                  style={styles.buttonPrimary}
+                  disabled={loading}
+                >
+                  {loading ? '추가 중...' : '추가'}
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       )}
@@ -568,6 +788,23 @@ const styles = {
     gap: '12px',
     justifyContent: 'flex-end',
     marginTop: '24px',
+  },
+  formGroup: {
+    marginBottom: '20px',
+  },
+  label: {
+    display: 'block',
+    fontWeight: 'bold',
+    marginBottom: '8px',
+    fontSize: '14px',
+  },
+  input: {
+    width: '100%',
+    padding: '10px',
+    fontSize: '14px',
+    border: '1px solid #ddd',
+    borderRadius: '4px',
+    boxSizing: 'border-box',
   },
 };
 
