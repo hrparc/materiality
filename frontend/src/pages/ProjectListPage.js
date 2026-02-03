@@ -32,7 +32,8 @@ const ProjectListPage = () => {
     const fetchIndustries = async () => {
       try {
         const data = await api.getIndustries();
-        setIndustries(data.sectors || []);
+        // API 응답: { industries: [{name, category, issueCount}, ...] }
+        setIndustries(data.industries || []);
       } catch (err) {
         console.error('산업군 목록 로딩 실패:', err);
       }
@@ -114,8 +115,8 @@ const ProjectListPage = () => {
                   >
                     <option value="">-- 산업군을 선택하세요 --</option>
                     {industries.map((industry, index) => (
-                      <option key={index} value={industry}>
-                        {industry}
+                      <option key={index} value={industry.name}>
+                        {industry.name}
                       </option>
                     ))}
                   </select>
