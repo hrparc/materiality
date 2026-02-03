@@ -168,17 +168,19 @@
   - 감정 분석 및 관련성 점수 산출 ✅
   - 파일: [media-routes.js](../backend/src/routes/media-routes.js), [news-scraper.js](../backend/src/services/news-scraper.js)
 
-### 1.3 수동 이슈 입력 (MVP) 🆕
-- [ ] **수동 이슈 입력 API**
+### 1.3 수동 이슈 입력 (MVP) ✅ 완료
+- [x] **수동 이슈 입력 API** ✅
   - `POST /api/issues/manual`
   - 유저가 직접 이슈 입력 (이슈명, 설명, E/S/G 카테고리)
-  - AI 라벨링 자동 적용 (인권/기후 판단)
+  - 유저 입력 기반 라벨링 (인권/기후 체크박스)
   - '직접 입력' 출처 태그 자동 추가
+  - 파일: [manual-issue-routes.js](../backend/src/routes/manual-issue-routes.js)
 
-- [ ] **수동 입력 이슈 조회 API**
-  - `GET /api/issues/manual/:projectId`
-  - 프로젝트별 수동 입력 이슈 목록 반환
-  - 다른 추천 이슈들과 함께 통합 표시
+- [x] **수동 입력 이슈 CRUD API** ✅
+  - `GET /api/issues/manual/:projectId` - 이슈 목록 조회
+  - `PUT /api/issues/manual/:issueId` - 이슈 수정
+  - `DELETE /api/issues/manual/:issueId` - 이슈 삭제
+  - 프로젝트별 수동 입력 이슈 관리 완성
 
 ### 1.4 보고서 AI 분석 (Post-MVP) 🔮
 **⚠️ MVP 범위에서 제외 - Phase 2 이후 개발 예정**
@@ -199,21 +201,27 @@
   - 추출된 이슈 목록 반환
   - PDF 내 원문 위치 정보 포함 (페이지 번호, 텍스트 하이라이트)
 
-### 1.5 이슈풀 통합 및 확정
-- [ ] **통합 이슈풀 조회 API**
+### 1.5 이슈풀 통합 및 확정 ✅ 완료
+- [x] **통합 이슈풀 조회 API** ✅
   - `GET /api/issues/pool/:projectId`
   - 3가지 경로 이슈 통합:
     1. 산업군 기반 추천 (SASB)
     2. 미디어 분석 추천
     3. 수동 입력 이슈
-  - 중복 제거 로직 (유사도 기반)
-  - 이슈별 출처 표시 (SASB/미디어/직접입력)
+  - 중복 이슈 병합 및 출처 태그 통합
+  - 이슈별 출처 표시 (sources 배열: type, label, detail)
+  - 프론트엔드용 선택 상태 관리 (isSelected)
+  - 파일: [issue-pool-routes.js](../backend/src/routes/issue-pool-routes.js)
 
-- [ ] **이슈풀 확정 API**
+- [x] **이슈풀 확정 API** ✅
   - `POST /api/issues/pool/confirm`
   - 사용자가 선택한 이슈 저장
   - 프로젝트 ID와 연결
   - 다음 단계(설문조사)로 진행 가능 상태 생성
+
+- [x] **이슈풀 관리 API** ✅
+  - `GET /api/issues/pool/:projectId/confirmed` - 확정된 이슈풀 조회
+  - `DELETE /api/issues/pool/:projectId` - 이슈풀 삭제 (재설정)
 
 ---
 
@@ -530,15 +538,27 @@
 - Phase 1.1 - 산업군 목록 및 이슈 추천 API 완료
 - Phase 1.1 - AI 기반 이슈 라벨링 시스템 완료 (인권 이슈 70개, 기후 이슈 111개)
 - Phase 1.2 - 미디어 분석 기능 완료 (네이버 뉴스 API 통합, ESG 분류, 감정 분석)
+- Phase 1.3 - 수동 이슈 입력 API 완료 (사용자 직접 입력 CRUD)
+- Phase 1.5 - 이슈풀 통합 및 확정 API 완료 (멀티소스 태그 시스템)
 
-**🎯 MVP 범위 조정 완료:**
-- 보고서 AI 분석 기능 → Post-MVP로 이동
-- 수동 이슈 입력 기능 → MVP에 추가
+**🎯 Phase 1 (1단계: 이슈풀 구축) 백엔드 완료!**
+- ✅ 산업군 기반 추천 (SASB)
+- ✅ 미디어 분석 추천 (네이버 뉴스)
+- ✅ 수동 이슈 입력
+- ✅ 이슈풀 통합 및 확정
+- ⏭️ 보고서 AI 분석 (Post-MVP로 이동)
 
-**즉시 착수 가능:**
-1. Phase 1.3 - 수동 이슈 입력 API (NEW - MVP 범위)
-2. Phase 1.5 - 이슈풀 통합 및 확정 API
-3. Phase 2.1 - 데이터베이스 스키마 설계 및 선택
+**🚀 다음 단계 선택지:**
+
+**옵션 A: 프론트엔드로 전환 (권장)**
+1. Phase 4.1 - 프론트엔드 프레임워크 선택 및 프로젝트 초기 설정
+2. Phase 4.2 - 1단계 UI 구현 (산업군 선택 → 미디어 분석 → 수동 입력 → 통합 이슈풀)
+3. Phase 4.3 - 백엔드 API 연동 및 테스트
+
+**옵션 B: 백엔드 계속 진행 (Phase 2 - 설문조사)**
+1. Phase 2.1 - 데이터베이스 스키마 설계 및 선택 (PostgreSQL / MongoDB)
+2. Phase 2.2 - 이해관계자 관리 API
+3. Phase 2.3 - 설문 생성 및 발송 API
 
 **다음 단계 질문:**
 - 프론트엔드 프레임워크: React / Vue / Svelte?
