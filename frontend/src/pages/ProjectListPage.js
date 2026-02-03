@@ -127,42 +127,44 @@ const ProjectListPage = () => {
                 </div>
 
                 <div style={styles.formGroup}>
-                  <label style={styles.label}>1단계: 상위 섹터 선택 *</label>
-                  <select
-                    value={formData.category}
-                    onChange={handleCategoryChange}
-                    style={styles.select}
-                  >
-                    <option value="">-- 상위 섹터를 선택하세요 --</option>
-                    {categories.map((category, index) => (
-                      <option key={index} value={category}>
-                        {category}
+                  <label style={styles.label}>산업군 선택 *</label>
+                  <div style={styles.selectRow}>
+                    <select
+                      value={formData.category}
+                      onChange={handleCategoryChange}
+                      style={styles.selectHalf}
+                    >
+                      <option value="">-- 상위 섹터 --</option>
+                      {categories.map((category, index) => (
+                        <option key={index} value={category}>
+                          {category}
+                        </option>
+                      ))}
+                    </select>
+                    <select
+                      value={formData.industry}
+                      onChange={(e) =>
+                        setFormData({ ...formData, industry: e.target.value })
+                      }
+                      style={styles.selectHalf}
+                      disabled={!formData.category}
+                    >
+                      <option value="">
+                        {formData.category
+                          ? '-- 세부 산업군 --'
+                          : '-- 상위 섹터를 먼저 선택하세요 --'}
                       </option>
-                    ))}
-                  </select>
-                </div>
-
-                <div style={styles.formGroup}>
-                  <label style={styles.label}>2단계: 산업군 선택 *</label>
-                  <select
-                    value={formData.industry}
-                    onChange={(e) =>
-                      setFormData({ ...formData, industry: e.target.value })
-                    }
-                    style={styles.select}
-                    disabled={!formData.category}
-                  >
-                    <option value="">
-                      {formData.category
-                        ? '-- 산업군을 선택하세요 --'
-                        : '-- 먼저 상위 섹터를 선택하세요 --'}
-                    </option>
-                    {subIndustries.map((industry, index) => (
-                      <option key={index} value={industry.name}>
-                        {industry.name}
-                      </option>
-                    ))}
-                  </select>
+                      {subIndustries.map((industry, index) => {
+                        // 대괄호 제거: "[헬스케어] 의료장비" -> "의료장비"
+                        const displayName = industry.name.replace(/^\[.*?\]\s*/, '');
+                        return (
+                          <option key={index} value={industry.name}>
+                            {displayName}
+                          </option>
+                        );
+                      })}
+                    </select>
+                  </div>
                   <p style={styles.hint}>
                     선택한 산업군의 SASB 기준 이슈가 기본으로 추가됩니다
                   </p>
@@ -339,6 +341,18 @@ const styles = {
   },
   select: {
     width: '100%',
+    padding: '12px',
+    fontSize: '14px',
+    border: '1px solid #ddd',
+    borderRadius: '4px',
+    boxSizing: 'border-box',
+  },
+  selectRow: {
+    display: 'flex',
+    gap: '12px',
+  },
+  selectHalf: {
+    flex: 1,
     padding: '12px',
     fontSize: '14px',
     border: '1px solid #ddd',
