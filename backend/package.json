@@ -16,7 +16,8 @@
     "test-news-search": "node scripts/test-news-search.js",
     "test-recommend-issues": "node scripts/test-recommend-issues.js",
     "test-report-upload": "node scripts/test-report-upload.js",
-    "test-batch-upload": "node scripts/test-batch-upload.js"
+    "test-batch-upload": "node scripts/test-batch-upload.js",
+    "test-manual-issues": "node scripts/test-manual-issues.js"
   },
   "keywords": [
     "esg",
