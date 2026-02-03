@@ -130,11 +130,12 @@
     }
     ```
 
-### 1.2 미디어 분석 기능 ✅ 완료
+### 1.2 미디어 분석 기능 ✅ 완료 (2026-02-03 최적화)
 - [x] **뉴스 스크래핑 API 구현** ✅ 완료
   - `POST /api/media/analyze` 엔드포인트 구현 ✅
   - **네이버 뉴스 검색 API 통합** (Google API 대체) ✅
-  - 요청 파라미터: `keyword` (기업명/업종명), `period` (기본 1년), `maxResults` ✅
+  - 요청 파라미터: `keyword` (기업명/업종명), `period` (y1/m6/m3/m1), `maxResults` ✅
+  - **기간 선택 기능**: 최근 1년/6개월/3개월/1개월 ✅
   - HTML 태그 제거 및 날짜 파싱 로직 구현 ✅
   - 실시간 뉴스 검색 정상 작동 확인 ✅
   - 파일: [news-scraper.js](../backend/src/services/news-scraper.js)
@@ -161,12 +162,41 @@
     }
     ```
 
-- [x] **미디어 기반 이슈 추천 로직** ✅ 완료
+- [x] **미디어 기반 이슈 추천 로직** ✅ 완료 + 최적화
+  - **2단계 파이프라인 구현** ⭐ 대규모 기사 분석 효율화
+    - Stage 1: Gemini Flash로 ESG 관련성 빠른 필터링 (제목 기반)
+    - Stage 2: 통과한 기사만 상세 이슈 추출 (GPT-4 등급 정밀 분석)
+  - **중복 기사 처리 시스템** ⭐ 빈도수 정확도 향상
+    - Gemini Embedding API (text-embedding-004) 사용
+    - 의미론적 유사도 분석 (코사인 유사도 > 0.85)
+    - 시간 윈도우 필터링 (2일 이내)
+    - 클러스터링 + 빈도수 보존 (duplicate_count 필드)
+    - 대표 기사 선정 (최신 + 제목 길이 기준)
+    - 파일: [deduplication-service.js](../backend/src/services/deduplication-service.js)
   - Gemini AI를 통한 ESG 이슈 자동 추출 ✅
   - 원문 기사 링크 및 헤드라인 저장 ✅
   - 카테고리별(E/S/G) 통계 및 분석 ✅
   - 감정 분석 및 관련성 점수 산출 ✅
   - 파일: [media-routes.js](../backend/src/routes/media-routes.js), [news-scraper.js](../backend/src/services/news-scraper.js)
+
+- [x] **이슈 추천 API 강화** ✅
+  - `POST /api/media/recommend-issues` 엔드포인트
+  - 기간별 분석 (y1/m6/m3/m1)
+  - 추천 이슈 개수 설정 가능 (topN 파라미터)
+  - 중복 제거 on/off 설정 가능
+  - 빈도 기반 이슈 랭킹 (duplicate_count 가중치 반영)
+
+- [ ] **⚠️ TODO: BigKinds API 통합** 🔴 우선순위 높음
+  - **현재 제약**: 네이버 뉴스 API는 최대 100개 기사만 제공
+  - **문제**: 삼성전자 같은 대기업 1년치 분석 시 최신 100개만 분석하면 의미 없음
+  - **해결 방안**: BigKinds API로 전환하여 진정한 1년 전수조사 구현
+  - **현재 상태**: BigKinds API 신규 발급 대기 중 (발급 막힌 상태)
+  - **구현 계획**:
+    - [ ] BigKinds API 키 발급 완료 대기
+    - [ ] BigKindsScraper 클래스 구현
+    - [ ] 대량 기사 다운로드 로직 (페이지네이션)
+    - [ ] 기존 NewsScraper와 통합 또는 교체
+    - [ ] 프론트엔드 UI 텍스트 업데이트 ("1년 전수조사" 강조)
 
 ### 1.3 수동 이슈 입력 (MVP) ✅ 완료
 - [x] **수동 이슈 입력 API** ✅
@@ -408,16 +438,17 @@
   - 3단계: 중요이슈 선정 (준비중)
   - 파일: [ProjectLayout.js](../frontend/src/components/ProjectLayout.js)
 
-### 4.3 1단계: 이슈풀 생성 UI (통합 페이지) ✅ 완료
+### 4.3 1단계: 이슈풀 생성 UI (통합 페이지) ✅ 완료 (2026-02-03 업데이트)
 - [x] **좌우 분할 레이아웃** ✅
   - 왼쪽: 이슈풀 후보 영역
   - 오른쪽: 선택된 이슈풀 (설문용)
   - 파일: [IssuePoolBuilderPage.js](../frontend/src/pages/IssuePoolBuilderPage.js)
 
-- [x] **[+ 이슈 추가] 드롭다운 메뉴** ✅
-  - 옵션 1: 산업군 기반 (온실가스 배출 등)
-  - 옵션 2: 미디어 조사
-  - 옵션 3: 직접 추가
+- [x] **[+ 이슈 추가] 드롭다운 메뉴** ✅ (2개 옵션으로 정리)
+  - ~~옵션 1: 산업군 기반 (온실가스 배출 등)~~ ❌ 제거됨 (자동 로드로 대체)
+  - 옵션 1: 📰 미디어 조사
+  - 옵션 2: ✏️ 직접 추가
+  - **변경 사유**: 산업군 이슈는 프로젝트 생성 시 자동으로 로드되므로 별도 메뉴 불필요
 
 - [x] **이슈 후보 영역 기능** ✅
   - 토글 선택으로 오른쪽으로 이동
@@ -433,10 +464,14 @@
   - 현재: 기본 기능만 구현
   - 개선 필요: 이슈 미리보기, 개별 선택
 
-- [ ] **미디어 조사 모달** (백엔드 연동 필요)
-  - 키워드 입력 폼
-  - 분석 진행 상태
-  - 추출된 이슈 목록
+- [x] **미디어 조사 모달** ✅ 완료 (백엔드 연동)
+  - 키워드 입력 폼 ✅
+  - **기간 선택**: 최근 1년/6개월/3개월/1개월 ✅
+  - **추천 이슈 개수 설정**: 1~20개 (기본 10개) ✅
+  - 분석 진행 상태 표시 ✅
+  - 추출된 이슈 목록 표시 ✅
+  - 빈도수 기반 랭킹 표시 ✅
+  - API: `POST /api/media/recommend-issues` 연동 완료 ✅
 
 - [ ] **직접 추가 모달** (백엔드 연동 필요)
   - 이슈 입력 폼
@@ -543,11 +578,21 @@
 
 ## 📋 다음 단계 (우선순위)
 
-**✅ 최근 완료:**
+**✅ 최근 완료 (2026-02-03 업데이트):**
 - Phase 0.6 - SASB 38개 산업 이슈 JSON 작성 완료
 - Phase 1.1 - 산업군 목록 및 이슈 추천 API 완료
 - Phase 1.1 - AI 기반 이슈 라벨링 시스템 완료 (인권 이슈 70개, 기후 이슈 111개)
 - Phase 1.2 - 미디어 분석 기능 완료 (네이버 뉴스 API 통합, ESG 분류, 감정 분석)
+- **Phase 1.2 최적화 완료** ⭐ (2026-02-03)
+  - ✅ Gemini Embedding 기반 중복 기사 감지 시스템
+  - ✅ 2단계 파이프라인 (ESG 필터링 → 이슈 추출)
+  - ✅ 기간 선택 기능 (y1/m6/m3/m1)
+  - ✅ 빈도수 보존 클러스터링 (duplicate_count)
+  - ✅ 프론트엔드 UI 업데이트 (기간 선택, 추천 개수 설정)
+  - 📁 신규 파일: [deduplication-service.js](../backend/src/services/deduplication-service.js)
+  - 🔄 수정 파일: [news-scraper.js](../backend/src/services/news-scraper.js), [media-controller.js](../backend/src/controllers/media-controller.js)
+  - 🎨 수정 UI: [IssuePoolBuilderPage.js](../frontend/src/pages/IssuePoolBuilderPage.js)
+  - 💾 Git Commit: d455437 (2026-02-03)
 - Phase 1.3 - 수동 이슈 입력 API 완료 (사용자 직접 입력 CRUD)
 - Phase 1.5 - 이슈풀 통합 및 확정 API 완료 (멀티소스 태그 시스템)
 
@@ -559,6 +604,15 @@
 - ⏭️ 보고서 AI 분석 (Post-MVP로 이동)
 
 **🚀 다음 단계 선택지:**
+
+**🔴 우선순위 1: BigKinds API 통합 (Phase 1.2 완성)**
+- 현재 네이버 API는 최대 100개 기사 제한 → 대기업 1년 분석에 부족
+- BigKinds API 키 발급 완료 시 즉시 통합 필요
+- 작업 내용:
+  1. BigKindsScraper 클래스 구현
+  2. 대량 기사 다운로드 로직 (페이지네이션)
+  3. 기존 NewsScraper와 통합/교체
+  4. 프론트엔드 UI 텍스트 업데이트
 
 **옵션 A: 프론트엔드로 전환 (권장)**
 1. Phase 4.1 - 프론트엔드 프레임워크 선택 및 프로젝트 초기 설정
