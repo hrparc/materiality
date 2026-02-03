@@ -17,7 +17,8 @@
     "test-recommend-issues": "node scripts/test-recommend-issues.js",
     "test-report-upload": "node scripts/test-report-upload.js",
     "test-batch-upload": "node scripts/test-batch-upload.js",
-    "test-manual-issues": "node scripts/test-manual-issues.js"
+    "test-manual-issues": "node scripts/test-manual-issues.js",
+    "test-issue-pool": "node scripts/test-issue-pool.js"
   },
   "keywords": [
     "esg",

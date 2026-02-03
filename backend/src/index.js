@@ -9,6 +9,7 @@ import mediaRoutes from './routes/media-routes.js';
 import industryRoutes from './routes/industry-routes.js';
 import reportRoutes from './routes/report-routes.js';
 import manualIssueRoutes from './routes/manual-issue-routes.js';
+import issuePoolRoutes from './routes/issue-pool-routes.js';
 
 dotenv.config();
 
@@ -68,6 +69,7 @@ app.get('/health', (req, res) => {
 // API 라우트 등록
 app.use('/api/issues', issueRoutes);
 app.use('/api/issues/manual', manualIssueRoutes);
+app.use('/api/issues/pool', issuePoolRoutes);
 app.use('/api/media', mediaRoutes);
 app.use('/api/industries', industryRoutes);
 app.use('/api/reports', reportRoutes);
